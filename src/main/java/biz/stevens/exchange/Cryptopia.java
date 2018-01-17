@@ -76,7 +76,6 @@ public class Cryptopia {
         Optional<String> json = publicCall(endpoint);
 
         if(json.isPresent()){
-            System.out.println(json.get());
             return from(json.get()).getList("Data", Market.class);
         }
         return Collections.emptyList();
@@ -199,7 +198,7 @@ public class Cryptopia {
                     statusCode(200);//.
                    // body("Success", equalTo(true));
             //TODO do something with the error field; ﻿{"Success":false,"Error":"Invalid authorization header."}
-            log.info("[PREF][PUBLIC] calling [{}] took [{}mS]", endpoint, response.time());
+            log.info("[PREF][PRIVATE] calling [{}] took [{}mS]", endpoint, response.time());
             return Optional.ofNullable(response.asString());
         }catch (Exception e){
             System.out.println("Something went wrong while making publicCall: ["+endpoint+"] Exception ["+e+"]");
