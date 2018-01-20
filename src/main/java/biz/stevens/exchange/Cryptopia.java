@@ -40,4 +40,8 @@ public interface Cryptopia {
     List<Balance> getBalance(@NonNull Integer currencyId);
 
     List<Balance> getBalance(@NonNull String currencyName);
+
+    Optional<DepositAddress> getDepositAddress(@NonNull Integer currencyId);
+
+    Optional<DepositAddress> getDepositAddress(@NonNull String currencyName);
 }

@@ -177,7 +177,7 @@ public class CryptopiaImpl implements Cryptopia {
     }
 
     /**
-     * This call is not properly tested
+     * This call is not properly tested (only visually)
      */
     @Override
     public List<Balance> getBalance(@NonNull final Integer currencyId) {
@@ -185,7 +185,7 @@ public class CryptopiaImpl implements Cryptopia {
     }
 
     /**
-     * This call is not properly tested
+     * This call is not properly tested (only visually)
      */
     @Override
     public List<Balance> getBalance(@NonNull final String currencyName) {
@@ -200,6 +200,29 @@ public class CryptopiaImpl implements Cryptopia {
             return from(json.get()).getList("Data", Balance.class);
         }
         return Collections.emptyList();
+    }
+
+    /**
+     * This call is not properly tested (only visually)
+     */
+    @Override
+    public Optional<DepositAddress> getDepositAddress(@NonNull final Integer currencyId) {
+        return getDepositAddressHelper("{\"CurrencyId\":" + currencyId + "}");
+    }
+
+    /**
+     * This call is not properly tested (only visually)
+     */
+    @Override
+    public Optional<DepositAddress> getDepositAddress(@NonNull final String currencyName) {
+        return getDepositAddressHelper("{\"Currency\":\"" + currencyName + "\"}");
+    }
+
+    private Optional<DepositAddress> getDepositAddressHelper(@NonNull final String jsonPostParam) {
+        String endpoint = "GetDepositAddress";
+        Optional<String> json = privateCall(endpoint, jsonPostParam);
+
+        return json.map(s -> from(s).getObject("Data", DepositAddress.class));
     }
 
     private Optional<String> publicCall(final String endpoint) {
