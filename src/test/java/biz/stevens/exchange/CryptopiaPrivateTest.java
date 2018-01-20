@@ -15,8 +15,20 @@ public class CryptopiaPrivateTest {
 
 
     @Test(enabled=false)
-
+    //@Test
     public void testGetGetBalance() {
-        cryptopia.getGetBalance();
+        cryptopia.getBalance().stream().forEach(System.out::println);
+    }
+
+    @Test(enabled = false)
+    //@Test
+    public void testGetGetBalanceCurrency() {
+        cryptopia.getBalance("1337").stream().forEach(System.out::println);
+    }
+
+    @Test(enabled = false)
+    //@Test
+    public void testGetGetBalanceCurrencyId() {
+        cryptopia.getBalance(331).stream().forEach(System.out::println);
     }
 }

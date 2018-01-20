@@ -172,11 +172,34 @@ public class CryptopiaImpl implements Cryptopia {
     }
 
     @Override
-    public void getGetBalance() {
+    public List<Balance> getBalance() {
+        return getBalanceHelper("{}");
+    }
+
+    /**
+     * This call is not properly tested
+     */
+    @Override
+    public List<Balance> getBalance(@NonNull final Integer currencyId) {
+        return getBalanceHelper("{\"CurrencyId\":" + currencyId + "}");
+    }
+
+    /**
+     * This call is not properly tested
+     */
+    @Override
+    public List<Balance> getBalance(@NonNull final String currencyName) {
+        return getBalanceHelper("{\"Currency\":\"" + currencyName + "\"}");
+    }
+
+    private List<Balance> getBalanceHelper(@NonNull final String jsonPostParam) {
         String endpoint = "GetBalance";
-        Optional<String> json = privateCall(endpoint, "{}");
-        //{"Currency":"DOT"}
-        json.ifPresent(System.out::println);
+        Optional<String> json = privateCall(endpoint, jsonPostParam);
+
+        if (json.isPresent()) {
+            return from(json.get()).getList("Data", Balance.class);
+        }
+        return Collections.emptyList();
     }
 
     private Optional<String> publicCall(final String endpoint) {
@@ -201,9 +224,9 @@ public class CryptopiaImpl implements Cryptopia {
     private Optional<String> privateCall(@NonNull final String endpoint, @NonNull final String jSonPostParam) {
         try {
             //https://www.cryptopia.co.nz/Forum/Thread/262
-            String nonce = getNonce();
-            String reqSignature = getReqSignature(nonce, endpoint, jSonPostParam);
-            String AUTH = getAUTH(nonce, reqSignature);
+            final String nonce = getNonce();
+            final String reqSignature = getReqSignature(nonce, endpoint, jSonPostParam);
+            final String AUTH = getAUTH(nonce, reqSignature);
 
             Response response = given()
                     .contentType(ContentType.JSON)
@@ -211,14 +234,14 @@ public class CryptopiaImpl implements Cryptopia {
                     .body(jSonPostParam)
                     .when()
                     .post(this.publicApiBaseUrl + endpoint);
-            response.then().
-                    statusCode(200);//.
-            // body("Success", equalTo(true));
+            response.then()
+                    .statusCode(200);
+            //.body("Success", equalTo(true));
             //TODO do something with the error field; ﻿{"Success":false,"Error":"Invalid authorization header."}
             log.info("[PREF][PRIVATE] calling [{}] took [{}mS]", endpoint, response.time());
+            System.out.println(response.asString());
             return Optional.ofNullable(response.asString());
         } catch (Exception e) {
-            System.out.println("Something went wrong while making publicCall: [" + endpoint + "] Exception [" + e + "]");
             log.error("Something went wrong while making publicCall: [{}] Exception [{}]", endpoint, e);
             return Optional.empty();
         }
