@@ -20,14 +20,14 @@ public class CryptopiaPublicTest {
     private static final int HOURS = 12;
     private static final int ORDER_COUNT = 10;
 
-    private Cryptopia cryptopia;
+    private CryptopiaImpl cryptopia;
     @BeforeClass
     public void setup() throws ConfigurationException {
-        this.cryptopia = new Cryptopia();
+        this.cryptopia = new CryptopiaImpl();
     }
 
     @Test
-    public void testGetCurrencies() throws Exception {
+    public void testGetCurrencies() {
         List<Currency> currencies = this.cryptopia.getCurrencies();
 
         Assert.assertFalse(currencies.isEmpty());
@@ -49,7 +49,7 @@ public class CryptopiaPublicTest {
     }
 
     @Test
-    public void testGetTradePairs() throws Exception {
+    public void testGetTradePairs() {
         List<TradePair> tradePairs = this.cryptopia.getTradePairs();
         Assert.assertFalse(tradePairs.isEmpty());
         TradePair tradePair = tradePairs.get(0);
@@ -71,7 +71,7 @@ public class CryptopiaPublicTest {
     }
 
     @Test
-    public void testGetMarkets() throws Exception {
+    public void testGetMarkets() {
         List<Market> markets = this.cryptopia.getMarkets();
         Assert.assertFalse(markets.isEmpty());
         Market market = markets.get(0);
@@ -80,7 +80,7 @@ public class CryptopiaPublicTest {
 
 
     @Test
-    public void testGetMarkets1() throws Exception {
+    public void testGetMarkets1() {
         List<Market> markets = this.cryptopia.getMarkets(HOURS);
         Assert.assertFalse(markets.isEmpty());
         Market market = markets.get(0);
@@ -88,7 +88,7 @@ public class CryptopiaPublicTest {
     }
 
     @Test
-    public void testGetMarkets2() throws Exception {
+    public void testGetMarkets2() {
         List<Market> markets = this.cryptopia.getMarkets(BASE_MARKET);
         Assert.assertFalse(markets.isEmpty());
         Market market = markets.get(0);
@@ -96,7 +96,7 @@ public class CryptopiaPublicTest {
     }
 
     @Test
-    public void testGetMarkets3() throws Exception {
+    public void testGetMarkets3() {
         List<Market> markets = this.cryptopia.getMarkets(BASE_MARKET,HOURS);
         Assert.assertFalse(markets.isEmpty());
         Market market = markets.get(0);
@@ -104,21 +104,21 @@ public class CryptopiaPublicTest {
     }
 
     @Test
-    public void testGetMarket() throws Exception {
+    public void testGetMarket() {
         Optional<Market> market = this.cryptopia.getMarket(MARKET);
         Assert.assertTrue(market.isPresent());
         assertMarket(market.get());
     }
 
     @Test
-    public void testGetMarket1() throws Exception {
+    public void testGetMarket1() {
         Optional<Market> market = this.cryptopia.getMarket(MARKET, HOURS);
         Assert.assertTrue(market.isPresent());
         assertMarket(market.get());
     }
 
     @Test
-    public void testGetMarketHistory() throws Exception {
+    public void testGetMarketHistory() {
         List<MarketHistory> marketHistories = this.cryptopia.getMarketHistory(MARKET, HOURS);
         Assert.assertFalse(marketHistories.isEmpty());
 
@@ -130,7 +130,7 @@ public class CryptopiaPublicTest {
 
 
     @Test
-    public void testGetMarketHistory1() throws Exception {
+    public void testGetMarketHistory1() {
         List<MarketHistory> marketHistories = this.cryptopia.getMarketHistory(MARKET);
         Assert.assertFalse(marketHistories.isEmpty());
 
@@ -140,7 +140,7 @@ public class CryptopiaPublicTest {
     }
 
     @Test
-    public void testGetMarketOrders() throws Exception {
+    public void testGetMarketOrders() {
         Optional<MarketOrders> marketOrders = this.cryptopia.getMarketOrders(MARKET);
         Assert.assertTrue(marketOrders.isPresent());
 
@@ -157,7 +157,7 @@ public class CryptopiaPublicTest {
 
 
     @Test
-    public void testGetMarketOrders1() throws Exception {
+    public void testGetMarketOrders1() {
         Optional<MarketOrders> marketOrders = this.cryptopia.getMarketOrders(MARKET, ORDER_COUNT);
         Assert.assertTrue(marketOrders.isPresent());
 
@@ -175,7 +175,7 @@ public class CryptopiaPublicTest {
     }
 
     @Test
-    public void testGetMarketOrderGroups() throws Exception {
+    public void testGetMarketOrderGroups() {
         List<MarketOrderGroup> marketOrderGroups = this.cryptopia.getMarketOrderGroups(MARKET);
         Assert.assertFalse(marketOrderGroups.isEmpty());
 
@@ -197,7 +197,7 @@ public class CryptopiaPublicTest {
     }
 
     @Test
-    public void testGetMarketOrderGroups1() throws Exception {
+    public void testGetMarketOrderGroups1() {
         List<MarketOrderGroup> marketOrderGroups = this.cryptopia.getMarketOrderGroups(MARKET, ORDER_COUNT);
         Assert.assertFalse(marketOrderGroups.isEmpty());
 

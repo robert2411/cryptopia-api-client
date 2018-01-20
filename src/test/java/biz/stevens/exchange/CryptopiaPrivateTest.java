@@ -7,16 +7,16 @@ import org.testng.annotations.Test;
 
 public class CryptopiaPrivateTest {
 
-    private Cryptopia cryptopia;
+    private CryptopiaImpl cryptopia;
     @BeforeClass
     public void setup() throws ConfigurationException {
-        this.cryptopia = new Cryptopia();
+        this.cryptopia = new CryptopiaImpl();
     }
 
 
     @Test(enabled=false)
 
-    public void testGetGetBalance() throws Exception {
+    public void testGetGetBalance() {
         cryptopia.getGetBalance();
     }
 }
