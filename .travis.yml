@@ -9,7 +9,7 @@ addons:
 jdk:
   - oraclejdk8
 script:
-  - mvn cobertura:coberturaclean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -Dmaven.test.failure.ignore=true
+  - mvn clean cobertura:cobertura org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -Dmaven.test.failure.ignore=true
 
 after_success:
     - bash <(curl -s https://codecov.io/bash)
