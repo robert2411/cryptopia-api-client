@@ -35,5 +35,9 @@ public interface Cryptopia {
 
     List<MarketOrderGroup> getMarketOrderGroups(@NonNull String marketName, int orderCount);
 
-    void getGetBalance();
+    List<Balance> getBalance();
+
+    List<Balance> getBalance(@NonNull Integer currencyId);
+
+    List<Balance> getBalance(@NonNull String currencyName);
 }
