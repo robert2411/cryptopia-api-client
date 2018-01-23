@@ -20,10 +20,10 @@ public class CryptopiaPublicTest {
     private static final int HOURS = 12;
     private static final int ORDER_COUNT = 10;
 
-    private CryptopiaImpl cryptopia;
+    private CryptopiaPublicImpl cryptopia;
     @BeforeClass
     public void setup() throws ConfigurationException {
-        this.cryptopia = new CryptopiaImpl();
+        this.cryptopia = new CryptopiaPublicImpl();
     }
 
     @Test

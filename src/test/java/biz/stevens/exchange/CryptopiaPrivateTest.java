@@ -13,10 +13,10 @@ public class CryptopiaPrivateTest {
     private static final int TRADEPAIR_ID = 5760;
     private static final int COUNT = 10;
 
-    private CryptopiaImpl cryptopia;
+    private CryptopiaPrivate cryptopia;
     @BeforeClass
     public void setup() throws ConfigurationException {
-        this.cryptopia = new CryptopiaImpl();
+        this.cryptopia = new CryptopiaPrivateImpl();
     }
 
 
