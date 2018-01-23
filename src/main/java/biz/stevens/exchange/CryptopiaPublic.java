@@ -6,7 +6,7 @@ import lombok.NonNull;
 import java.util.List;
 import java.util.Optional;
 
-public interface Cryptopia {
+public interface CryptopiaPublic {
     List<Currency> getCurrencies();
 
     List<TradePair> getTradePairs();
@@ -34,14 +34,4 @@ public interface Cryptopia {
     List<MarketOrderGroup> getMarketOrderGroups(@NonNull String marketName);
 
     List<MarketOrderGroup> getMarketOrderGroups(@NonNull String marketName, int orderCount);
-
-    List<Balance> getBalance();
-
-    List<Balance> getBalance(@NonNull Integer currencyId);
-
-    List<Balance> getBalance(@NonNull String currencyName);
-
-    Optional<DepositAddress> getDepositAddress(@NonNull Integer currencyId);
-
-    Optional<DepositAddress> getDepositAddress(@NonNull String currencyName);
 }
