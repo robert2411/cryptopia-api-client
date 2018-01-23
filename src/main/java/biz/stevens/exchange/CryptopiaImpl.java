@@ -261,6 +261,41 @@ public class CryptopiaImpl implements Cryptopia {
         return Collections.emptyList();
     }
 
+    @Override
+    public List<TradeHistory> getTradeHistory() {
+        return getTradeHistoryHelper("{}");
+    }
+
+    @Override
+    public List<TradeHistory> getTradeHistory(@NonNull final String market) {
+        return getTradeHistoryHelper("{\"Market\":\"" + market + "\"}");
+    }
+
+    @Override
+    public List<TradeHistory> getTradeHistory(@NonNull final String market, @NonNull final Integer count) {
+        return getTradeHistoryHelper("{\"Market\":\"" + market + "\", \"Count\":" + count + "}");
+    }
+
+    @Override
+    public List<TradeHistory> getTradeHistory(@NonNull final Integer tradePairId) {
+        return getTradeHistoryHelper("{\"TradePairId\":" + tradePairId + "}");
+    }
+
+    @Override
+    public List<TradeHistory> getTradeHistory(@NonNull final Integer tradePairId, @NonNull final Integer count) {
+        return getTradeHistoryHelper("{\"TradePairId\":" + tradePairId + ", \"Count\":" + count + "}");
+    }
+
+    private List<TradeHistory> getTradeHistoryHelper(@NonNull final String jsonPostParam) {
+        String endpoint = "GetTradeHistory";
+        Optional<String> json = privateCall(endpoint, jsonPostParam);
+
+        if (json.isPresent()) {
+            return from(json.get()).getList("Data", TradeHistory.class);
+        }
+        return Collections.emptyList();
+    }
+
     private Optional<String> publicCall(final String endpoint) {
         try {
             Response response = given().

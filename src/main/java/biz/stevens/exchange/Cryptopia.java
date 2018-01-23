@@ -54,4 +54,14 @@ public interface Cryptopia {
     List<OpenOrder> getOpenOrders(@NonNull Integer tradePairId);
 
     List<OpenOrder> getOpenOrders(@NonNull Integer tradePairId, @NonNull Integer count);
+
+    List<TradeHistory> getTradeHistory();
+
+    List<TradeHistory> getTradeHistory(@NonNull String market);
+
+    List<TradeHistory> getTradeHistory(@NonNull String market, @NonNull Integer count);
+
+    List<TradeHistory> getTradeHistory(@NonNull Integer tradePairId);
+
+    List<TradeHistory> getTradeHistory(@NonNull Integer tradePairId, @NonNull Integer count);
 }

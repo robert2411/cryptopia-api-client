@@ -20,60 +20,94 @@ public class CryptopiaPrivateTest {
     }
 
 
-    //@Test(enabled=false)
-    @Test
+    @Test(enabled = false)
+    //@Test
     public void testGetGetBalance() {
         cryptopia.getBalance().stream().forEach(System.out::println);
     }
 
-    //@Test(enabled = false)
-    @Test
+    @Test(enabled = false)
+    //@Test
     public void testGetGetBalanceCurrency() {
         cryptopia.getBalance(CURRENCY_NAME).stream().forEach(System.out::println);
     }
 
-    //@Test(enabled = false)
-    @Test
+    @Test(enabled = false)
+    //@Test
     public void testGetGetBalanceCurrencyId() {
         cryptopia.getBalance(CURRENCY_ID).stream().forEach(System.out::println);
     }
 
-    //@Test(enabled = false)
-    @Test
+    @Test(enabled = false)
+    //@Test
     public void testGetDepositAddressCurrency() {
         cryptopia.getDepositAddress(CURRENCY_NAME).ifPresent(System.out::println);
     }
 
-    //@Test(enabled = false)
-    @Test
+    @Test(enabled = false)
+    //@Test
     public void testGetDepositAddressCurrencyId() {
         cryptopia.getDepositAddress(CURRENCY_ID).ifPresent(System.out::println);
     }
 
-    //@Test(enabled = false)
-    @Test
+    @Test(enabled = false)
+    //@Test
     public void testGetOpenOrders() {
         cryptopia.getOpenOrders().stream().forEach(System.out::println);
     }
 
-    @Test
+    @Test(enabled = false)
+    //@Test
     public void testGetOpenOrdersMarket() {
         cryptopia.getOpenOrders(MARKET).stream().forEach(System.out::println);
     }
 
-    @Test
+    @Test(enabled = false)
+    //@Test
     public void testGetOpenOrdersMarketCount() {
         cryptopia.getOpenOrders(MARKET, COUNT).stream().forEach(System.out::println);
     }
 
-    @Test
+    @Test(enabled = false)
+    //@Test
     public void testGetOpenOrdersTradePairIdCount() {
         cryptopia.getOpenOrders(TRADEPAIR_ID, COUNT).stream().forEach(System.out::println);
     }
 
-    @Test
+    @Test(enabled = false)
+    //@Test
     public void testGetOpenOrdersTradePairId() {
         cryptopia.getOpenOrders(TRADEPAIR_ID).stream().forEach(System.out::println);
+    }
+
+    @Test(enabled = false)
+    //@Test
+    public void testGetTradeHistory() {
+        cryptopia.getTradeHistory().stream().forEach(System.out::println);
+    }
+
+    @Test(enabled = false)
+    //@Test
+    public void testGetTradeHistoryMarket() {
+        cryptopia.getTradeHistory(MARKET).stream().forEach(System.out::println);
+    }
+
+    @Test(enabled = false)
+    //@Test
+    public void testGetGetTradeHistoryMarketCount() {
+        cryptopia.getTradeHistory(MARKET, COUNT).stream().forEach(System.out::println);
+    }
+
+    @Test(enabled = false)
+    //@Test
+    public void testGetTradeHistoryTradePairIdCount() {
+        cryptopia.getTradeHistory(TRADEPAIR_ID, COUNT).stream().forEach(System.out::println);
+    }
+
+    @Test(enabled = false)
+    //@Test
+    public void testGetTradeHistoryTradePairId() {
+        cryptopia.getTradeHistory(TRADEPAIR_ID).stream().forEach(System.out::println);
     }
 
 
