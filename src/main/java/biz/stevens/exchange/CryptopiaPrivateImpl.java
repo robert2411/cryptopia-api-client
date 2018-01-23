@@ -12,6 +12,7 @@ import org.apache.commons.configuration.PropertiesConfiguration;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
+import java.math.BigDecimal;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -200,6 +201,37 @@ public class CryptopiaPrivateImpl implements CryptopiaPrivate {
             return from(json.get()).getList("Data", Transaction.class);
         }
         return Collections.emptyList();
+    }
+
+    /**
+     * @param market The market symbol of the trade e.g. 'DOT/BTC'
+     * @param type   the type of trade e.g. 'Buy' or 'Sell'
+     * @param rate   the rate or price to pay for the coins e.g. 0.00000034
+     * @param amount the amount of coins to buy e.g. 123.00000000
+     * @return an tradeResponse
+     */
+    @Override
+    public Optional<SubmitTrade> submitTrade(@NonNull final String market, @NonNull final String type, @NonNull BigDecimal rate, @NonNull BigDecimal amount) {
+        return submitTradeHelper("{\"Market\":\"" + market + "\", \"Type\":\"" + type + "\", \"Rate\":" + rate + ",\"Amount\":" + amount + "}");
+    }
+
+    /**
+     * @param tradePairId The Cryptopia tradepair identifier of trade e.g. '100'
+     * @param type        the type of trade e.g. 'Buy' or 'Sell'
+     * @param rate        the rate or price to pay for the coins e.g. 0.00000034
+     * @param amount      the amount of coins to buy e.g. 123.00000000
+     * @return an tradeResponse
+     */
+    @Override
+    public Optional<SubmitTrade> submitTrade(@NonNull final Integer tradePairId, @NonNull final String type, @NonNull BigDecimal rate, @NonNull BigDecimal amount) {
+        return submitTradeHelper("{\"TradePairId\":" + tradePairId + ", \"Type\":\"" + type + "\", \"Rate\":" + rate + ",\"Amount\":" + amount + "}");
+    }
+
+    private Optional<SubmitTrade> submitTradeHelper(@NonNull final String jsonPostParam) {
+        String endpoint = "SubmitTrade";
+        Optional<String> json = privateCall(endpoint, jsonPostParam);
+
+        return json.map(s -> from(s).getObject("Data", SubmitTrade.class));
     }
 
     private static String getNonce() {

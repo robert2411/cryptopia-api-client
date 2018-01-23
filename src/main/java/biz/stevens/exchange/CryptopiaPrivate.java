@@ -3,6 +3,7 @@ package biz.stevens.exchange;
 import biz.stevens.datatypes.*;
 import lombok.NonNull;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -40,4 +41,8 @@ public interface CryptopiaPrivate {
     List<Transaction> getTransactions(@NonNull String type);
 
     List<Transaction> getTransactions(@NonNull String type, @NonNull Integer count);
+
+    Optional<SubmitTrade> submitTrade(@NonNull String market, @NonNull String type, @NonNull BigDecimal rate, @NonNull BigDecimal amount);
+
+    Optional<SubmitTrade> submitTrade(@NonNull Integer tradePairId, @NonNull String type, @NonNull BigDecimal rate, @NonNull BigDecimal amount);
 }

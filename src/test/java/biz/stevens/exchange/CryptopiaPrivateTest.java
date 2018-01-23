@@ -4,6 +4,8 @@ import org.apache.commons.configuration.ConfigurationException;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.math.BigDecimal;
+
 
 public class CryptopiaPrivateTest {
     private static final String CURRENCY_NAME = "ETN";
@@ -110,16 +112,49 @@ public class CryptopiaPrivateTest {
         cryptopia.getTradeHistory(TRADEPAIR_ID).stream().forEach(System.out::println);
     }
 
-    //@Test(enabled = false)
-    @Test
+    @Test(enabled = false)
+    //@Test
     public void testGetTransactionHistoryMarketCount() {
         cryptopia.getTransactions("Deposit", COUNT).stream().forEach(System.out::println);
     }
 
-    //@Test(enabled = false)
-    @Test
+    @Test(enabled = false)
+    //@Test
     public void testGetTransactionHistoryMarket() {
         cryptopia.getTransactions("Withdraw").stream().forEach(System.out::println);
+    }
+
+    /*
+     * the consciences of a wrong call can be big here thats whey the params are listed here
+     * @param tradePairId The Cryptopia tradepair identifier of trade e.g. '100'
+     * @param type the type of trade e.g. 'Buy' or 'Sell'
+     * @param rate the rate or price to pay for the coins e.g. 0.00000034
+     * @param amount the amount of coins to buy e.g. 123.00000000
+     * @return an tradeResponse
+     */
+    @Test(enabled = false)
+    //@Test
+    public void testSubmitTradeTradePairId() {
+        BigDecimal rate = BigDecimal.valueOf(1000.0);
+        BigDecimal amount = BigDecimal.valueOf(1);
+
+        cryptopia.submitTrade(MARKET, "Sell", rate, amount).ifPresent(System.out::println);
+    }
+
+    /*
+     * the consciences of a wrong call can be big here thats whey the params are listed here
+     * @param market The market symbol of the trade e.g. 'DOT/BTC'
+     * @param type the type of trade e.g. 'Buy' or 'Sell'
+     * @param rate the rate or price to pay for the coins e.g. 0.00000034
+     * @param amount the amount of coins to buy e.g. 123.00000000
+     * @return an tradeResponse
+     */
+    @Test(enabled = false)
+    //@Test
+    public void testSubmitTradeMarket() {
+        BigDecimal rate = BigDecimal.valueOf(1000.0);
+        BigDecimal amount = BigDecimal.valueOf(1);
+        cryptopia.submitTrade(TRADEPAIR_ID, "Sell", rate, amount).ifPresent(System.out::println);
     }
 
 
