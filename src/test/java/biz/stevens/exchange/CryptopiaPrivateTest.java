@@ -6,8 +6,13 @@ import org.testng.annotations.Test;
 
 
 public class CryptopiaPrivateTest {
-    private static final String CURRENCY_NAME = "1337";
-    private static final int CURRENCY_ID = 331;
+    private static final String CURRENCY_NAME = "ETN";
+    private static final int CURRENCY_ID = 695;
+    private static final String BASE_MARKET = "ETN";
+    private static final String MARKET = "ETN/USDT";
+    private static final int TRADEPAIR_ID = 5760;
+    private static final int COUNT = 10;
+
     private CryptopiaImpl cryptopia;
     @BeforeClass
     public void setup() throws ConfigurationException {
@@ -15,34 +20,60 @@ public class CryptopiaPrivateTest {
     }
 
 
-    @Test(enabled=false)
-    //@Test
+    //@Test(enabled=false)
+    @Test
     public void testGetGetBalance() {
         cryptopia.getBalance().stream().forEach(System.out::println);
     }
 
-    @Test(enabled = false)
-    //@Test
+    //@Test(enabled = false)
+    @Test
     public void testGetGetBalanceCurrency() {
         cryptopia.getBalance(CURRENCY_NAME).stream().forEach(System.out::println);
     }
 
-    @Test(enabled = false)
-    //@Test
+    //@Test(enabled = false)
+    @Test
     public void testGetGetBalanceCurrencyId() {
         cryptopia.getBalance(CURRENCY_ID).stream().forEach(System.out::println);
     }
 
-    @Test(enabled = false)
-    //@Test
+    //@Test(enabled = false)
+    @Test
     public void testGetDepositAddressCurrency() {
         cryptopia.getDepositAddress(CURRENCY_NAME).ifPresent(System.out::println);
     }
 
-    @Test(enabled = false)
-    //@Test
+    //@Test(enabled = false)
+    @Test
     public void testGetDepositAddressCurrencyId() {
         cryptopia.getDepositAddress(CURRENCY_ID).ifPresent(System.out::println);
+    }
+
+    //@Test(enabled = false)
+    @Test
+    public void testGetOpenOrders() {
+        cryptopia.getOpenOrders().stream().forEach(System.out::println);
+    }
+
+    @Test
+    public void testGetOpenOrdersMarket() {
+        cryptopia.getOpenOrders(MARKET).stream().forEach(System.out::println);
+    }
+
+    @Test
+    public void testGetOpenOrdersMarketCount() {
+        cryptopia.getOpenOrders(MARKET, COUNT).stream().forEach(System.out::println);
+    }
+
+    @Test
+    public void testGetOpenOrdersTradePairIdCount() {
+        cryptopia.getOpenOrders(TRADEPAIR_ID, COUNT).stream().forEach(System.out::println);
+    }
+
+    @Test
+    public void testGetOpenOrdersTradePairId() {
+        cryptopia.getOpenOrders(TRADEPAIR_ID).stream().forEach(System.out::println);
     }
 
 

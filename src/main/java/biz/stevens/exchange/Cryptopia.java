@@ -44,4 +44,14 @@ public interface Cryptopia {
     Optional<DepositAddress> getDepositAddress(@NonNull Integer currencyId);
 
     Optional<DepositAddress> getDepositAddress(@NonNull String currencyName);
+
+    List<OpenOrder> getOpenOrders();
+
+    List<OpenOrder> getOpenOrders(@NonNull String market);
+
+    List<OpenOrder> getOpenOrders(@NonNull String market, @NonNull Integer count);
+
+    List<OpenOrder> getOpenOrders(@NonNull Integer tradePairId);
+
+    List<OpenOrder> getOpenOrders(@NonNull Integer tradePairId, @NonNull Integer count);
 }

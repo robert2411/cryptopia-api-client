@@ -225,6 +225,42 @@ public class CryptopiaImpl implements Cryptopia {
         return json.map(s -> from(s).getObject("Data", DepositAddress.class));
     }
 
+
+    @Override
+    public List<OpenOrder> getOpenOrders() {
+        return getOpenOrdersHelper("{}");
+    }
+
+    @Override
+    public List<OpenOrder> getOpenOrders(@NonNull final String market) {
+        return getOpenOrdersHelper("{\"Market\":\"" + market + "\"}");
+    }
+
+    @Override
+    public List<OpenOrder> getOpenOrders(@NonNull final String market, @NonNull final Integer count) {
+        return getOpenOrdersHelper("{\"Market\":\"" + market + "\", \"Count\":" + count + "}");
+    }
+
+    @Override
+    public List<OpenOrder> getOpenOrders(@NonNull final Integer tradePairId) {
+        return getOpenOrdersHelper("{\"TradePairId\":" + tradePairId + "}");
+    }
+
+    @Override
+    public List<OpenOrder> getOpenOrders(@NonNull final Integer tradePairId, @NonNull final Integer count) {
+        return getOpenOrdersHelper("{\"TradePairId\":" + tradePairId + ", \"Count\":" + count + "}");
+    }
+
+    private List<OpenOrder> getOpenOrdersHelper(@NonNull final String jsonPostParam) {
+        String endpoint = "GetOpenOrders";
+        Optional<String> json = privateCall(endpoint, jsonPostParam);
+
+        if (json.isPresent()) {
+            return from(json.get()).getList("Data", OpenOrder.class);
+        }
+        return Collections.emptyList();
+    }
+
     private Optional<String> publicCall(final String endpoint) {
         try {
             Response response = given().
