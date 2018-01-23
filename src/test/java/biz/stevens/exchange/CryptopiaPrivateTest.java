@@ -5,8 +5,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.math.BigDecimal;
+import java.math.BigInteger;
 
-
+@Test(enabled = false)
 public class CryptopiaPrivateTest {
     private static final String CURRENCY_NAME = "ETN";
     private static final int CURRENCY_ID = 695;
@@ -22,106 +23,89 @@ public class CryptopiaPrivateTest {
     }
 
 
-    @Test(enabled = false)
-    //@Test
+    @Test
     public void testGetGetBalance() {
         cryptopia.getBalance().stream().forEach(System.out::println);
     }
 
-    @Test(enabled = false)
-    //@Test
+    @Test
     public void testGetGetBalanceCurrency() {
-        cryptopia.getBalance(CURRENCY_NAME).stream().forEach(System.out::println);
+        cryptopia.getBalance(CURRENCY_NAME).forEach(System.out::println);
     }
 
-    @Test(enabled = false)
-    //@Test
+    @Test
     public void testGetGetBalanceCurrencyId() {
-        cryptopia.getBalance(CURRENCY_ID).stream().forEach(System.out::println);
+        cryptopia.getBalance(CURRENCY_ID).forEach(System.out::println);
     }
 
-    @Test(enabled = false)
-    //@Test
+    @Test
     public void testGetDepositAddressCurrency() {
         cryptopia.getDepositAddress(CURRENCY_NAME).ifPresent(System.out::println);
     }
 
-    @Test(enabled = false)
-    //@Test
+    @Test
     public void testGetDepositAddressCurrencyId() {
         cryptopia.getDepositAddress(CURRENCY_ID).ifPresent(System.out::println);
     }
 
-    @Test(enabled = false)
-    //@Test
+    @Test
     public void testGetOpenOrders() {
-        cryptopia.getOpenOrders().stream().forEach(System.out::println);
+        cryptopia.getOpenOrders().forEach(System.out::println);
     }
 
-    @Test(enabled = false)
-    //@Test
+    @Test
     public void testGetOpenOrdersMarket() {
-        cryptopia.getOpenOrders(MARKET).stream().forEach(System.out::println);
+        cryptopia.getOpenOrders(MARKET).forEach(System.out::println);
     }
 
-    @Test(enabled = false)
-    //@Test
+    @Test
     public void testGetOpenOrdersMarketCount() {
-        cryptopia.getOpenOrders(MARKET, COUNT).stream().forEach(System.out::println);
+        cryptopia.getOpenOrders(MARKET, COUNT).forEach(System.out::println);
     }
 
-    @Test(enabled = false)
-    //@Test
+    @Test
     public void testGetOpenOrdersTradePairIdCount() {
-        cryptopia.getOpenOrders(TRADEPAIR_ID, COUNT).stream().forEach(System.out::println);
+        cryptopia.getOpenOrders(TRADEPAIR_ID, COUNT).forEach(System.out::println);
     }
 
-    @Test(enabled = false)
-    //@Test
+    @Test
     public void testGetOpenOrdersTradePairId() {
-        cryptopia.getOpenOrders(TRADEPAIR_ID).stream().forEach(System.out::println);
+        cryptopia.getOpenOrders(TRADEPAIR_ID).forEach(System.out::println);
     }
 
-    @Test(enabled = false)
-    //@Test
+    @Test
     public void testGetTradeHistory() {
-        cryptopia.getTradeHistory().stream().forEach(System.out::println);
+        cryptopia.getTradeHistory().forEach(System.out::println);
     }
 
-    @Test(enabled = false)
-    //@Test
+    @Test
     public void testGetTradeHistoryMarket() {
-        cryptopia.getTradeHistory(MARKET).stream().forEach(System.out::println);
+        cryptopia.getTradeHistory(MARKET).forEach(System.out::println);
     }
 
-    @Test(enabled = false)
-    //@Test
+    @Test
     public void testGetGetTradeHistoryMarketCount() {
-        cryptopia.getTradeHistory(MARKET, COUNT).stream().forEach(System.out::println);
+        cryptopia.getTradeHistory(MARKET, COUNT).forEach(System.out::println);
     }
 
-    @Test(enabled = false)
-    //@Test
+    @Test
     public void testGetTradeHistoryTradePairIdCount() {
-        cryptopia.getTradeHistory(TRADEPAIR_ID, COUNT).stream().forEach(System.out::println);
+        cryptopia.getTradeHistory(TRADEPAIR_ID, COUNT).forEach(System.out::println);
     }
 
-    @Test(enabled = false)
-    //@Test
+    @Test
     public void testGetTradeHistoryTradePairId() {
-        cryptopia.getTradeHistory(TRADEPAIR_ID).stream().forEach(System.out::println);
+        cryptopia.getTradeHistory(TRADEPAIR_ID).forEach(System.out::println);
     }
 
-    @Test(enabled = false)
-    //@Test
+    @Test
     public void testGetTransactionHistoryMarketCount() {
-        cryptopia.getTransactions("Deposit", COUNT).stream().forEach(System.out::println);
+        cryptopia.getTransactions("Deposit", COUNT).forEach(System.out::println);
     }
 
-    @Test(enabled = false)
-    //@Test
+    @Test
     public void testGetTransactionHistoryMarket() {
-        cryptopia.getTransactions("Withdraw").stream().forEach(System.out::println);
+        cryptopia.getTransactions("Withdraw").forEach(System.out::println);
     }
 
     /*
@@ -132,8 +116,7 @@ public class CryptopiaPrivateTest {
      * @param amount the amount of coins to buy e.g. 123.00000000
      * @return an tradeResponse
      */
-    @Test(enabled = false)
-    //@Test
+    @Test
     public void testSubmitTradeTradePairId() {
         BigDecimal rate = BigDecimal.valueOf(1000.0);
         BigDecimal amount = BigDecimal.valueOf(1);
@@ -149,12 +132,31 @@ public class CryptopiaPrivateTest {
      * @param amount the amount of coins to buy e.g. 123.00000000
      * @return an tradeResponse
      */
-    @Test(enabled = false)
-    //@Test
+    //@Test(enabled = false)
+    @Test
     public void testSubmitTradeMarket() {
         BigDecimal rate = BigDecimal.valueOf(1000.0);
         BigDecimal amount = BigDecimal.valueOf(1);
         cryptopia.submitTrade(TRADEPAIR_ID, "Sell", rate, amount).ifPresent(System.out::println);
+    }
+
+
+    @Test
+    public void testCancelAllTrades() {
+        cryptopia.cancelAllTrades().forEach(System.out::println);
+    }
+
+
+    @Test
+    public void testcancelTradeByOrderId() {
+        /* this value should be changed before the test to a valid tradeOrderId */
+        BigInteger orderId = BigInteger.valueOf(285045097);
+        cryptopia.cancelTradesByOrderId(orderId).forEach(System.out::println);
+    }
+
+    @Test
+    public void testCancelTradeByTradePairId() {
+        cryptopia.cancelTradesByTradePairId(TRADEPAIR_ID).forEach(System.out::println);
     }
 
 

@@ -13,6 +13,7 @@ import org.apache.commons.configuration.PropertiesConfiguration;
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -232,6 +233,33 @@ public class CryptopiaPrivateImpl implements CryptopiaPrivate {
         Optional<String> json = privateCall(endpoint, jsonPostParam);
 
         return json.map(s -> from(s).getObject("Data", SubmitTrade.class));
+    }
+
+
+    @Override
+    public List<Long> cancelAllTrades() {
+        return cancelTradeHelper("{\"Type\":\"All\"}");
+    }
+
+    @Override
+    public List<Long> cancelTradesByOrderId(@NonNull final BigInteger orderId) {
+        return cancelTradeHelper("{\"Type\":\"Trade\",\"OrderId\":" + orderId + "}");
+    }
+
+    @Override
+    public List<Long> cancelTradesByTradePairId(@NonNull final Integer tradePairId) {
+        return cancelTradeHelper("{\"Type\":\"TradePair\",\"TradePairId\":" + tradePairId + "}");
+    }
+
+
+    private List<Long> cancelTradeHelper(@NonNull final String jsonPostParam) {
+        String endpoint = "CancelTrade";
+        Optional<String> json = privateCall(endpoint, jsonPostParam);
+
+        if (json.isPresent()) {
+            return from(json.get()).getList("Data", Long.class);
+        }
+        return Collections.emptyList();
     }
 
     private static String getNonce() {
