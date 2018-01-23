@@ -296,6 +296,39 @@ public class CryptopiaImpl implements Cryptopia {
         return Collections.emptyList();
     }
 
+    /**
+     * Returns a list of transactions
+     *
+     * @param type The type of transactions to return e.g. 'Deposit' or 'Withdraw'
+     * @return a list of transactions
+     */
+    @Override
+    public List<Transaction> getTransactions(@NonNull final String type) {
+        return getTransactionsHelper("{\"Type\":\"" + type + "\"}");
+    }
+
+    /**
+     * Returns a list of transactions
+     *
+     * @param type  type The type of transactions to return e.g. 'Deposit' or 'Withdraw'
+     * @param count (optional) The maximum amount of transactions to return e.g. '10' (default: 100)
+     * @return a list of transactions
+     */
+    @Override
+    public List<Transaction> getTransactions(@NonNull final String type, @NonNull final Integer count) {
+        return getTransactionsHelper("{\"Type\":\"" + type + "\", \"Count\":" + count + "}");
+    }
+
+    private List<Transaction> getTransactionsHelper(@NonNull final String jsonPostParam) {
+        String endpoint = "GetTransactions";
+        Optional<String> json = privateCall(endpoint, jsonPostParam);
+
+        if (json.isPresent()) {
+            return from(json.get()).getList("Data", Transaction.class);
+        }
+        return Collections.emptyList();
+    }
+
     private Optional<String> publicCall(final String endpoint) {
         try {
             Response response = given().

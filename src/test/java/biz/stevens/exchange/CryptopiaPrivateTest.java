@@ -110,6 +110,18 @@ public class CryptopiaPrivateTest {
         cryptopia.getTradeHistory(TRADEPAIR_ID).stream().forEach(System.out::println);
     }
 
+    //@Test(enabled = false)
+    @Test
+    public void testGetTransactionHistoryMarketCount() {
+        cryptopia.getTransactions("Deposit", COUNT).stream().forEach(System.out::println);
+    }
+
+    //@Test(enabled = false)
+    @Test
+    public void testGetTransactionHistoryMarket() {
+        cryptopia.getTransactions("Withdraw").stream().forEach(System.out::println);
+    }
+
 
 
 
