@@ -2,6 +2,9 @@ package biz.stevens.exchange;
 
 import biz.stevens.datatypes.*;
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
+import io.restassured.path.json.config.JsonParserType;
+import io.restassured.path.json.config.JsonPathConfig;
 import io.restassured.response.Response;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
@@ -24,11 +27,13 @@ public class CryptopiaPublicImpl implements CryptopiaPublic {
 
     public CryptopiaPublicImpl() throws ConfigurationException {
         Configuration config = new PropertiesConfiguration("cryptopia.properties");
-        publicApiBaseUrl = config.getString("publicApiBaseUrl", "https://www.cryptopia.co.nz/api/");
+        this.publicApiBaseUrl = config.getString("publicApiBaseUrl", "https://www.cryptopia.co.nz/api/");
+        JsonPath.config = JsonPathConfig.jsonPathConfig().defaultParserType(JsonParserType.GSON);
     }
 
     public CryptopiaPublicImpl(@NonNull final String publicApiBaseUrl) {
         this.publicApiBaseUrl = publicApiBaseUrl;
+        JsonPath.config = JsonPathConfig.jsonPathConfig().defaultParserType(JsonParserType.GSON);
     }
 
 

@@ -2,6 +2,9 @@ package biz.stevens.exchange;
 
 import biz.stevens.datatypes.*;
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
+import io.restassured.path.json.config.JsonParserType;
+import io.restassured.path.json.config.JsonPathConfig;
 import io.restassured.response.Response;
 import lombok.NonNull;
 import lombok.SneakyThrows;
@@ -33,15 +36,18 @@ public class CryptopiaPrivateImpl implements CryptopiaPrivate {
 
     public CryptopiaPrivateImpl() throws ConfigurationException {
         Configuration config = new PropertiesConfiguration("cryptopia.properties");
-        privateKey = config.getString("privateKey");
-        publicKey = config.getString("publicKey");
-        privateApiBaseUrl = config.getString("privateApiBaseUrl");
+        this.privateKey = config.getString("privateKey");
+        this.publicKey = config.getString("publicKey");
+        this.privateApiBaseUrl = config.getString("privateApiBaseUrl");
+
+        JsonPath.config = JsonPathConfig.jsonPathConfig().defaultParserType(JsonParserType.GSON);
     }
 
     public CryptopiaPrivateImpl(@NonNull final String privateKey, @NonNull final String publicKey, @NonNull final String privateApiBaseUrl, @NonNull final String publicApiBaseUrl) {
         this.privateKey = privateKey;
         this.publicKey = publicKey;
         this.privateApiBaseUrl = privateApiBaseUrl;
+        JsonPath.config = JsonPathConfig.jsonPathConfig().defaultParserType(JsonParserType.GSON);
     }
 
 
