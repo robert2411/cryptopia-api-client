@@ -9,10 +9,21 @@ import java.util.List;
 import java.util.Optional;
 
 public interface CryptopiaPrivate {
+    /**
+     * @return all balances
+     */
     List<Balance> getBalance();
 
+    /**
+     * @param currencyId The Cryptopia currency identifier of the balance to return e.g. '2'
+     * @return a specific currency balance
+     */
     List<Balance> getBalance(@NonNull Integer currencyId);
 
+    /**
+     * @param currencyName The currency symbol of the balance to return e.g. 'DOT'
+     * @return a specific currency balance
+     */
     List<Balance> getBalance(@NonNull String currencyName);
 
     Optional<DepositAddress> getDepositAddress(@NonNull Integer currencyId);
