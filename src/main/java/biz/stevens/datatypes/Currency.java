@@ -1,5 +1,6 @@
 package biz.stevens.datatypes;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
 import lombok.ToString;
@@ -7,46 +8,61 @@ import lombok.ToString;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+import static biz.stevens.datatypes.FieldNames.*;
+
 @Getter
 @ToString
 public class Currency {
-    @SerializedName("Id")
+    @JsonProperty(ID)
+    @SerializedName(ID)
     private BigInteger id;
 
-    @SerializedName("Name")
+    @JsonProperty(NAME)
+    @SerializedName(NAME)
     private String name;
 
-    @SerializedName("Symbol")
+    @JsonProperty(SYMBOL)
+    @SerializedName(SYMBOL)
     private String symbol;
 
-    @SerializedName("Algorithm")
+    @JsonProperty(ALGORITHM)
+    @SerializedName(ALGORITHM)
     private String algorithm;
 
-    @SerializedName("WithdrawFee")
+    @JsonProperty(WITHDRAW_FEE)
+    @SerializedName(WITHDRAW_FEE)
     private BigDecimal withdrawFee;
 
-    @SerializedName("MinWithdraw")
+    @JsonProperty(MIN_WITHDRAW)
+    @SerializedName(MIN_WITHDRAW)
     private BigDecimal minWithdraw;
 
-    @SerializedName("MinBaseTrade")
+    @JsonProperty(MIN_BASE_TRADE)
+    @SerializedName(MIN_BASE_TRADE)
     private BigDecimal minBaseTrade;
 
-    @SerializedName("IsTipEnabled")
+    @JsonProperty(IS_TIP_ENABLED)
+    @SerializedName(IS_TIP_ENABLED)
     private Boolean isTipEnabled;
 
-    @SerializedName("MinTip")
+    @JsonProperty(MIN_TIP)
+    @SerializedName(MIN_TIP)
     private BigDecimal minTip;
 
-    @SerializedName("DepositConfirmations")
+    @JsonProperty(DEPOSIT_CONFIRMATIONS)
+    @SerializedName(DEPOSIT_CONFIRMATIONS)
     private BigInteger depositConfirmations;
 
-    @SerializedName("Status")
+    @JsonProperty(STATUS)
+    @SerializedName(STATUS)
     private String status;
 
-    @SerializedName("StatusMessage")
+    @JsonProperty(STATUS_MESSAGE)
+    @SerializedName(STATUS_MESSAGE)
     private String statusMessage;
 
-    @SerializedName("ListingStatus")
+    @JsonProperty(LISTING_STATUS)
+    @SerializedName(LISTING_STATUS)
     private String listingStatus;
 
 
