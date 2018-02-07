@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/robert2411/cryptopia-api-client.svg?branch=master)](https://travis-ci.org/robert2411/cryptopia-api-client)
 [![Quality Gate](https://sonarcloud.io/api/badges/gate?key=com.github.robert2411%3Acryptopia-api-client)](https://sonarcloud.io/dashboard?id=com.github.robert2411%3Acryptopia-api-client)
 [![codecov](https://codecov.io/gh/robert2411/cryptopia-api-client/branch/master/graph/badge.svg)](https://codecov.io/gh/robert2411/cryptopia-api-client)
+[![](https://jitpack.io/v/robert2411/cryptopia-api-client.svg)](https://jitpack.io/#robert2411/cryptopia-api-client)
 
 # Cryptopia-api-client
 This project is more a test project for me to see how to set up external tools and link them properly with gitlab
