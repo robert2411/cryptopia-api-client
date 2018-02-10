@@ -198,7 +198,7 @@ public class CryptopiaPublicTest {
 
     @Test
     public void testGetMarketOrderGroups1() {
-        List<MarketOrderGroup> marketOrderGroups = this.cryptopia.getMarketOrderGroups(MARKET, ORDER_COUNT);
+        List<MarketOrderGroup> marketOrderGroups = this.cryptopia.getMarketOrderGroups(ORDER_COUNT, MARKET);
         Assert.assertFalse(marketOrderGroups.isEmpty());
 
         MarketOrderGroup marketOrderGroup = marketOrderGroups.get(0);
