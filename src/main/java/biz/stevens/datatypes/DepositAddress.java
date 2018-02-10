@@ -16,7 +16,7 @@ public class DepositAddress {
     private String currency;
 
     @JsonProperty(ADDRESS)
-    @SerializedName(ID)
+    @SerializedName(ADDRESS)
     private String address;
 
     @JsonProperty(BASE_ADDRESS)

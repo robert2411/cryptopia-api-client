@@ -1,57 +1,76 @@
 package biz.stevens.datatypes;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
 import lombok.ToString;
 
 import java.math.BigInteger;
 
+import static biz.stevens.datatypes.FieldNames.*;
+import static biz.stevens.datatypes.FieldNames.CURRENCY;
+
 @ToString
 @Getter
 public class TradePair {
-    @SerializedName("Id")
+    @JsonProperty(ID)
+    @SerializedName(ID)
     private BigInteger id;
 
-    @SerializedName("Label")
+    @JsonProperty(LABEL)
+    @SerializedName(LABEL)
     private String label;
 
-    @SerializedName("Currency")
+    @JsonProperty(CURRENCY)
+    @SerializedName(CURRENCY)
     private String currency;
 
-    @SerializedName("Symbol")
+    @JsonProperty(SYMBOL)
+    @SerializedName(SYMBOL)
     private String symbol;
 
-    @SerializedName("BaseCurrency")
+    @JsonProperty(BASE_CURRENCY)
+    @SerializedName(BASE_CURRENCY)
     private String baseCurrency;
 
-    @SerializedName("BaseSymbol")
+    @JsonProperty(BASE_SYMBOL)
+    @SerializedName(BASE_SYMBOL)
     private String baseSymbol;
 
-    @SerializedName("Status")
+    @JsonProperty(STATUS)
+    @SerializedName(STATUS)
     private String status;
 
-    @SerializedName("StatusMessage")
+    @JsonProperty(STATUS_MESSAGE)
+    @SerializedName(STATUS_MESSAGE)
     private String statusMessage;
 
-    @SerializedName("TradeFee")
+    @JsonProperty(TRADE_FEE)
+    @SerializedName(TRADE_FEE)
     private String tradeFee;
 
-    @SerializedName("MinimumTrade")
+    @JsonProperty(MINIMUM_TRADE)
+    @SerializedName(MINIMUM_TRADE)
     private String minimumTrade;
 
-    @SerializedName("MaximumTrade")
+    @JsonProperty(MAXIMUM_TRADE)
+    @SerializedName(MAXIMUM_TRADE)
     private String maximumTrade;
 
-    @SerializedName("MinimumBaseTrade")
+    @JsonProperty(MINIMUM_BASE_TRADE)
+    @SerializedName(MINIMUM_BASE_TRADE)
     private String minimumBaseTrade;
 
-    @SerializedName("MaximumBaseTrade")
+    @JsonProperty(MAXIMUM_BASE_TRADE)
+    @SerializedName(MAXIMUM_BASE_TRADE)
     private String maximumBaseTrade;
 
-    @SerializedName("MinimumPrice")
+    @JsonProperty(MINIMUM_PRICE)
+    @SerializedName(MINIMUM_PRICE)
     private String minimumPrice;
 
-    @SerializedName("MaximumPrice")
+    @JsonProperty(MAXIMUM_PRICE)
+    @SerializedName(MAXIMUM_PRICE)
     private String maximumPrice;
 
 }

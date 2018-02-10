@@ -1,5 +1,6 @@
 package biz.stevens.datatypes;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
 import lombok.ToString;
@@ -7,27 +8,36 @@ import lombok.ToString;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+import static biz.stevens.datatypes.FieldNames.*;
+
 @Getter
 @ToString
 public class MarketHistory {
-    @SerializedName("TradePairId")
+    @JsonProperty(TRADE_PAIR_ID)
+    @SerializedName(TRADE_PAIR_ID)
     private BigInteger tradePairId;
 
-    @SerializedName("Label")
+    @JsonProperty(LABEL)
+    @SerializedName(LABEL)
     private String label;
 
-    @SerializedName("Type")
+    @JsonProperty(TYPE)
+    @SerializedName(TYPE)
     private String type;
 
-    @SerializedName("Price")
+    @JsonProperty(PRICE)
+    @SerializedName(PRICE)
     private BigDecimal price;
 
-    @SerializedName("Amount")
+    @JsonProperty(AMOUNT)
+    @SerializedName(AMOUNT)
     private BigDecimal amount;
 
-    @SerializedName("Total")
+    @JsonProperty(TOTAL)
+    @SerializedName(TOTAL)
     private BigDecimal total;
 
-    @SerializedName("Timestamp")
+    @JsonProperty(TIME_STAMP)
+    @SerializedName(TIME_STAMP)
     private Long timestamp;
 }

@@ -1,5 +1,6 @@
 package biz.stevens.datatypes;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
 import lombok.ToString;
@@ -7,36 +8,49 @@ import lombok.ToString;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+import static biz.stevens.datatypes.FieldNames.*;
+import static biz.stevens.datatypes.FieldNames.AMOUNT;
+
 @ToString
 @Getter
 public class Transaction {
-    @SerializedName("Id")
+    @JsonProperty(ID)
+    @SerializedName(ID)
     private BigInteger id;
 
-    @SerializedName("Currency")
+    @JsonProperty(CURRENCY)
+    @SerializedName(CURRENCY)
     private String currency;
 
-    @SerializedName("TxId")
+    @JsonProperty(TX_ID)
+    @SerializedName(TX_ID)
     private String txId;
 
-    @SerializedName("Type")
+    @JsonProperty(TYPE)
+    @SerializedName(TYPE)
     private String type;
 
-    @SerializedName("Amount")
+    @JsonProperty(AMOUNT)
+    @SerializedName(AMOUNT)
     private BigDecimal amount;
 
-    @SerializedName("Fee")
+    @JsonProperty(FEE)
+    @SerializedName(FEE)
     private BigDecimal fee;
 
-    @SerializedName("Status")
+    @JsonProperty(STATUS)
+    @SerializedName(STATUS)
     private String status;
 
-    @SerializedName("Confirmations")
+    @JsonProperty(CONFIRMATIONS)
+    @SerializedName(CONFIRMATIONS)
     private BigInteger confirmations;
 
-    @SerializedName("TimeStamp")
+    @JsonProperty(TIME_STAMP)
+    @SerializedName(TIME_STAMP)
     private String timeStamp;
 
-    @SerializedName("Address")
+    @JsonProperty(ADDRESS)
+    @SerializedName(ADDRESS)
     private String address;
 }

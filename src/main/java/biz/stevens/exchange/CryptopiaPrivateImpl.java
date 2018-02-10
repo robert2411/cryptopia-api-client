@@ -30,9 +30,9 @@ import static io.restassured.path.json.JsonPath.from;
 
 @Slf4j
 public class CryptopiaPrivateImpl implements CryptopiaPrivate {
-    private final String privateKey;
-    private final String publicKey;
-    private final String privateApiBaseUrl;
+    @NonNull private final String privateKey;
+    @NonNull private final String publicKey;
+    @NonNull private final String privateApiBaseUrl;
 
     public CryptopiaPrivateImpl() throws ConfigurationException {
         Configuration config = new PropertiesConfiguration("cryptopia.properties");

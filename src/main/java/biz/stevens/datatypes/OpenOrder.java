@@ -1,5 +1,6 @@
 package biz.stevens.datatypes;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
 import lombok.ToString;
@@ -7,23 +8,40 @@ import lombok.ToString;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+import static biz.stevens.datatypes.FieldNames.*;
+
 @Getter
 @ToString
 public class OpenOrder {
-    @SerializedName("OrderId")
+    @JsonProperty(ORDER_ID)
+    @SerializedName(ORDER_ID)
     private BigInteger orderId;
-    @SerializedName("TradePairId")
+
+    @JsonProperty(TRADE_PAIR_ID)
+    @SerializedName(TRADE_PAIR_ID)
     private BigInteger tradePairId;
-    @SerializedName("Type")
+
+    @JsonProperty(TYPE)
+    @SerializedName(TYPE)
     private String type;
-    @SerializedName("Rate")
+
+    @JsonProperty(RATE)
+    @SerializedName(RATE)
     private BigDecimal rate;
-    @SerializedName("Amount")
+
+    @JsonProperty(AMOUNT)
+    @SerializedName(AMOUNT)
     private BigDecimal amount;
-    @SerializedName("Total")
+
+    @JsonProperty(TOTAL)
+    @SerializedName(TOTAL)
     private BigDecimal total;
-    @SerializedName("Remaining")
+
+    @JsonProperty(REMAINING)
+    @SerializedName(REMAINING)
     private BigDecimal remaining;
-    @SerializedName("TimeStamp")
+
+    @JsonProperty(TIME_STAMP)
+    @SerializedName(TIME_STAMP)
     private String timeStamp;
 }
