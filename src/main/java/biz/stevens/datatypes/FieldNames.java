@@ -68,6 +68,7 @@ public class FieldNames {
     public static final String SYMBOL = "Symbol";
 
     public static final String TIME_STAMP = "TimeStamp";
+    public static final String TIMESTAMP = "Timestamp";
     public static final String TOTAL = "Total";
     public static final String TRADE_FEE = "TradeFee";
     public static final String TRADE_ID = "TradeId";

@@ -37,7 +37,7 @@ public class MarketHistory {
     @SerializedName(TOTAL)
     private BigDecimal total;
 
-    @JsonProperty(TIME_STAMP)
-    @SerializedName(TIME_STAMP)
+    @JsonProperty(TIMESTAMP)
+    @SerializedName(TIMESTAMP)
     private Long timestamp;
 }
