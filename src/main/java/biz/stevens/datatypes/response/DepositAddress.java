@@ -1,4 +1,4 @@
-package biz.stevens.datatypes;
+package biz.stevens.datatypes.response;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;

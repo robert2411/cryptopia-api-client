@@ -1,10 +1,7 @@
 package biz.stevens.exchange;
 
-import biz.stevens.datatypes.*;
+import biz.stevens.datatypes.response.*;
 import io.restassured.http.ContentType;
-import io.restassured.path.json.JsonPath;
-import io.restassured.path.json.config.JsonParserType;
-import io.restassured.path.json.config.JsonPathConfig;
 import io.restassured.response.Response;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;

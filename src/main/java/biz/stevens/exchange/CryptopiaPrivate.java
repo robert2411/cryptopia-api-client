@@ -1,6 +1,6 @@
 package biz.stevens.exchange;
 
-import biz.stevens.datatypes.*;
+import biz.stevens.datatypes.response.*;
 import lombok.NonNull;
 
 import java.math.BigDecimal;
