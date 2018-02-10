@@ -1,10 +1,7 @@
 package biz.stevens.exchange;
 
-import biz.stevens.datatypes.*;
+import biz.stevens.datatypes.response.*;
 import io.restassured.http.ContentType;
-import io.restassured.path.json.JsonPath;
-import io.restassured.path.json.config.JsonParserType;
-import io.restassured.path.json.config.JsonPathConfig;
 import io.restassured.response.Response;
 import lombok.NonNull;
 import lombok.SneakyThrows;
@@ -27,47 +24,44 @@ import java.util.Optional;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.path.json.JsonPath.from;
+import static org.hamcrest.core.IsEqual.equalTo;
 
 @Slf4j
 public class CryptopiaPrivateImpl implements CryptopiaPrivate {
-    private final String privateKey;
-    private final String publicKey;
-    private final String privateApiBaseUrl;
+    @NonNull private final String privateKey;
+    @NonNull private final String publicKey;
+    @NonNull private final String privateApiBaseUrl;
 
     public CryptopiaPrivateImpl() throws ConfigurationException {
         Configuration config = new PropertiesConfiguration("cryptopia.properties");
         this.privateKey = config.getString("privateKey");
         this.publicKey = config.getString("publicKey");
         this.privateApiBaseUrl = config.getString("privateApiBaseUrl");
-
-        JsonPath.config = JsonPathConfig.jsonPathConfig().defaultParserType(JsonParserType.GSON);
     }
 
-    public CryptopiaPrivateImpl(@NonNull final String privateKey, @NonNull final String publicKey, @NonNull final String privateApiBaseUrl, @NonNull final String publicApiBaseUrl) {
+    /**
+     * Use this constructor if you dont want to use the cryptopia.properties file to pass the requered values
+     * @param privateKey The private api key
+     * @param publicKey The public api key
+     * @param privateApiBaseUrl The private api base url (normally this should be "https://www.cryptopia.co.nz/api/"
+     */
+    public CryptopiaPrivateImpl(@NonNull final String privateKey, @NonNull final String publicKey, @NonNull final String privateApiBaseUrl) {
         this.privateKey = privateKey;
         this.publicKey = publicKey;
         this.privateApiBaseUrl = privateApiBaseUrl;
-        JsonPath.config = JsonPathConfig.jsonPathConfig().defaultParserType(JsonParserType.GSON);
     }
-
-
 
     @Override
     public List<Balance> getBalance() {
         return getBalanceHelper("{}");
     }
 
-    /**
-     * This call is not properly tested (only visually)
-     */
+
     @Override
     public List<Balance> getBalance(@NonNull final Integer currencyId) {
         return getBalanceHelper("{\"CurrencyId\":" + currencyId + "}");
     }
 
-    /**
-     * This call is not properly tested (only visually)
-     */
     @Override
     public List<Balance> getBalance(@NonNull final String currencyName) {
         return getBalanceHelper("{\"Currency\":\"" + currencyName + "\"}");
@@ -83,17 +77,11 @@ public class CryptopiaPrivateImpl implements CryptopiaPrivate {
         return Collections.emptyList();
     }
 
-    /**
-     * This call is not properly tested (only visually)
-     */
     @Override
     public Optional<DepositAddress> getDepositAddress(@NonNull final Integer currencyId) {
         return getDepositAddressHelper("{\"CurrencyId\":" + currencyId + "}");
     }
 
-    /**
-     * This call is not properly tested (only visually)
-     */
     @Override
     public Optional<DepositAddress> getDepositAddress(@NonNull final String currencyName) {
         return getDepositAddressHelper("{\"Currency\":\"" + currencyName + "\"}");
@@ -105,7 +93,6 @@ public class CryptopiaPrivateImpl implements CryptopiaPrivate {
 
         return json.map(s -> from(s).getObject("Data", DepositAddress.class));
     }
-
 
     @Override
     public List<OpenOrder> getOpenOrders() {
@@ -177,24 +164,11 @@ public class CryptopiaPrivateImpl implements CryptopiaPrivate {
         return Collections.emptyList();
     }
 
-    /**
-     * Returns a list of transactions
-     *
-     * @param type The type of transactions to return e.g. 'Deposit' or 'Withdraw'
-     * @return a list of transactions
-     */
     @Override
     public List<Transaction> getTransactions(@NonNull final String type) {
         return getTransactionsHelper("{\"Type\":\"" + type + "\"}");
     }
 
-    /**
-     * Returns a list of transactions
-     *
-     * @param type  type The type of transactions to return e.g. 'Deposit' or 'Withdraw'
-     * @param count (optional) The maximum amount of transactions to return e.g. '10' (default: 100)
-     * @return a list of transactions
-     */
     @Override
     public List<Transaction> getTransactions(@NonNull final String type, @NonNull final Integer count) {
         return getTransactionsHelper("{\"Type\":\"" + type + "\", \"Count\":" + count + "}");
@@ -210,25 +184,11 @@ public class CryptopiaPrivateImpl implements CryptopiaPrivate {
         return Collections.emptyList();
     }
 
-    /**
-     * @param market The market symbol of the trade e.g. 'DOT/BTC'
-     * @param type   the type of trade e.g. 'Buy' or 'Sell'
-     * @param rate   the rate or price to pay for the coins e.g. 0.00000034
-     * @param amount the amount of coins to buy e.g. 123.00000000
-     * @return an tradeResponse
-     */
     @Override
     public Optional<SubmitTrade> submitTrade(@NonNull final String market, @NonNull final String type, @NonNull BigDecimal rate, @NonNull BigDecimal amount) {
         return submitTradeHelper("{\"Market\":\"" + market + "\", \"Type\":\"" + type + "\", \"Rate\":" + rate + ",\"Amount\":" + amount + "}");
     }
 
-    /**
-     * @param tradePairId The Cryptopia tradepair identifier of trade e.g. '100'
-     * @param type        the type of trade e.g. 'Buy' or 'Sell'
-     * @param rate        the rate or price to pay for the coins e.g. 0.00000034
-     * @param amount      the amount of coins to buy e.g. 123.00000000
-     * @return an tradeResponse
-     */
     @Override
     public Optional<SubmitTrade> submitTrade(@NonNull final Integer tradePairId, @NonNull final String type, @NonNull BigDecimal rate, @NonNull BigDecimal amount) {
         return submitTradeHelper("{\"TradePairId\":" + tradePairId + ", \"Type\":\"" + type + "\", \"Rate\":" + rate + ",\"Amount\":" + amount + "}");
@@ -240,7 +200,6 @@ public class CryptopiaPrivateImpl implements CryptopiaPrivate {
 
         return json.map(s -> from(s).getObject("Data", SubmitTrade.class));
     }
-
 
     @Override
     public List<Long> cancelAllTrades() {
@@ -256,7 +215,6 @@ public class CryptopiaPrivateImpl implements CryptopiaPrivate {
     public List<Long> cancelTradesByTradePairId(@NonNull final Integer tradePairId) {
         return cancelTradeHelper("{\"Type\":\"TradePair\",\"TradePairId\":" + tradePairId + "}");
     }
-
 
     private List<Long> cancelTradeHelper(@NonNull final String jsonPostParam) {
         String endpoint = "CancelTrade";
@@ -320,11 +278,10 @@ public class CryptopiaPrivateImpl implements CryptopiaPrivate {
                     .when()
                     .post(this.privateApiBaseUrl + endpoint);
             response.then()
-                    .statusCode(200);
-            //.body("Success", equalTo(true));
+                    .statusCode(200)
+                    .body("Success", equalTo(true));
             //TODO do something with the error field; ﻿{"Success":false,"Error":"Invalid authorization header."}
             log.info("[PREF][PRIVATE] calling [{}] took [{}mS]", endpoint, response.time());
-            System.out.println(response.asString());
             return Optional.ofNullable(response.asString());
         } catch (Exception e) {
             log.error("Something went wrong while making publicCall: [{}] Exception [{}]", endpoint, e);
