@@ -28,12 +28,13 @@ public class CryptopiaPublicImpl implements CryptopiaPublic {
     public CryptopiaPublicImpl() throws ConfigurationException {
         Configuration config = new PropertiesConfiguration("cryptopia.properties");
         this.publicApiBaseUrl = config.getString("publicApiBaseUrl", "https://www.cryptopia.co.nz/api/");
-        JsonPath.config = JsonPathConfig.jsonPathConfig().defaultParserType(JsonParserType.GSON);
     }
 
+    /**
+     * @param publicApiBaseUrl The public api url normally this should be "https://www.cryptopia.co.nz/api/"
+     */
     public CryptopiaPublicImpl(@NonNull final String publicApiBaseUrl) {
         this.publicApiBaseUrl = publicApiBaseUrl;
-        JsonPath.config = JsonPathConfig.jsonPathConfig().defaultParserType(JsonParserType.GSON);
     }
 
 
@@ -94,6 +95,22 @@ public class CryptopiaPublicImpl implements CryptopiaPublic {
     }
 
     @Override
+    public Optional<Market> getMarket(Integer tradePairId) {
+        return getMarket(tradePairId.toString());
+    }
+
+    @Override
+    public Optional<Market> getMarket(Integer tradePairId, int hours) {
+        return getMarket(tradePairId.toString(), hours);
+    }
+
+    @Override
+    public Optional<Market> getMarket(@NonNull final String marketName) {
+        return getMarket(marketName, 24);
+
+    }
+
+    @Override
     public Optional<Market> getMarket(@NonNull final String marketName, final int hours) {
         String endpoint = "GetMarket/" + marketName + "/" + Integer.toString(hours);
 
@@ -103,9 +120,13 @@ public class CryptopiaPublicImpl implements CryptopiaPublic {
     }
 
     @Override
-    public Optional<Market> getMarket(@NonNull final String marketName) {
-        return getMarket(marketName, 24);
+    public List<MarketHistory> getMarketHistory(Integer tradePairId) {
+        return getMarketHistory(tradePairId.toString());
+    }
 
+    @Override
+    public List<MarketHistory> getMarketHistory(Integer tradePairId, int hours) {
+        return getMarketHistory(tradePairId.toString(), hours);
     }
 
     @Override
@@ -123,7 +144,18 @@ public class CryptopiaPublicImpl implements CryptopiaPublic {
             return from(json.get()).getList("Data", MarketHistory.class);
         }
         return Collections.emptyList();
+    }
 
+
+
+    @Override
+    public Optional<MarketOrders> getMarketOrders(Integer tradePairId) {
+        return getMarketOrders(tradePairId.toString());
+    }
+
+    @Override
+    public Optional<MarketOrders> getMarketOrders(Integer tradePairId, int orderCount) {
+        return getMarketOrders(tradePairId.toString(), orderCount);
     }
 
     @Override
@@ -138,17 +170,21 @@ public class CryptopiaPublicImpl implements CryptopiaPublic {
         Optional<String> json = publicCall(endpoint);
 
         return json.map(s -> from(s).getObject("Data", MarketOrders.class));
-
     }
 
     @Override
-    public List<MarketOrderGroup> getMarketOrderGroups(@NonNull final String marketName) {
-        return getMarketOrderGroups(marketName, 100);
+    public List<MarketOrderGroup> getMarketOrderGroups(@NonNull final String marketName, @NonNull  String... marketNames) {
+
+        return getMarketOrderGroups(100, marketName, marketNames);
     }
 
     @Override
-    public List<MarketOrderGroup> getMarketOrderGroups(@NonNull final String marketName, final int orderCount) {
-        String endpoint = "GetMarketOrderGroups/" + marketName + "/" + Integer.toString(orderCount);
+    public List<MarketOrderGroup> getMarketOrderGroups(final int orderCount, @NonNull final String marketName, @NonNull  String... marketNames) {
+        String tempMarketName = marketName;
+        for (String market: marketNames){
+            tempMarketName += "-" + market;
+        }
+        String endpoint = "GetMarketOrderGroups/" + tempMarketName + "/" + Integer.toString(orderCount);
 
         Optional<String> json = publicCall(endpoint);
 

@@ -27,6 +27,7 @@ import java.util.Optional;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.path.json.JsonPath.from;
+import static org.hamcrest.core.IsEqual.equalTo;
 
 @Slf4j
 public class CryptopiaPrivateImpl implements CryptopiaPrivate {
@@ -280,11 +281,10 @@ public class CryptopiaPrivateImpl implements CryptopiaPrivate {
                     .when()
                     .post(this.privateApiBaseUrl + endpoint);
             response.then()
-                    .statusCode(200);
-            //.body("Success", equalTo(true));
+                    .statusCode(200)
+                    .body("Success", equalTo(true));
             //TODO do something with the error field; ﻿{"Success":false,"Error":"Invalid authorization header."}
             log.info("[PREF][PRIVATE] calling [{}] took [{}mS]", endpoint, response.time());
-            System.out.println(response.asString());
             return Optional.ofNullable(response.asString());
         } catch (Exception e) {
             log.error("Something went wrong while making publicCall: [{}] Exception [{}]", endpoint, e);
