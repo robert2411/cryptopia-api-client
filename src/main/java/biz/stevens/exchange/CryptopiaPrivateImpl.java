@@ -39,18 +39,19 @@ public class CryptopiaPrivateImpl implements CryptopiaPrivate {
         this.privateKey = config.getString("privateKey");
         this.publicKey = config.getString("publicKey");
         this.privateApiBaseUrl = config.getString("privateApiBaseUrl");
-
-        JsonPath.config = JsonPathConfig.jsonPathConfig().defaultParserType(JsonParserType.GSON);
     }
 
-    public CryptopiaPrivateImpl(@NonNull final String privateKey, @NonNull final String publicKey, @NonNull final String privateApiBaseUrl, @NonNull final String publicApiBaseUrl) {
+    /**
+     * Use this constructor if you dont want to use the cryptopia.properties file to pass the requered values
+     * @param privateKey The private api key
+     * @param publicKey The public api key
+     * @param privateApiBaseUrl The private api base url (normally this should be "https://www.cryptopia.co.nz/api/"
+     */
+    public CryptopiaPrivateImpl(@NonNull final String privateKey, @NonNull final String publicKey, @NonNull final String privateApiBaseUrl) {
         this.privateKey = privateKey;
         this.publicKey = publicKey;
         this.privateApiBaseUrl = privateApiBaseUrl;
-        JsonPath.config = JsonPathConfig.jsonPathConfig().defaultParserType(JsonParserType.GSON);
     }
-
-
 
     @Override
     public List<Balance> getBalance() {
@@ -62,7 +63,6 @@ public class CryptopiaPrivateImpl implements CryptopiaPrivate {
     public List<Balance> getBalance(@NonNull final Integer currencyId) {
         return getBalanceHelper("{\"CurrencyId\":" + currencyId + "}");
     }
-
 
     @Override
     public List<Balance> getBalance(@NonNull final String currencyName) {
@@ -79,12 +79,10 @@ public class CryptopiaPrivateImpl implements CryptopiaPrivate {
         return Collections.emptyList();
     }
 
-
     @Override
     public Optional<DepositAddress> getDepositAddress(@NonNull final Integer currencyId) {
         return getDepositAddressHelper("{\"CurrencyId\":" + currencyId + "}");
     }
-
 
     @Override
     public Optional<DepositAddress> getDepositAddress(@NonNull final String currencyName) {
@@ -97,7 +95,6 @@ public class CryptopiaPrivateImpl implements CryptopiaPrivate {
 
         return json.map(s -> from(s).getObject("Data", DepositAddress.class));
     }
-
 
     @Override
     public List<OpenOrder> getOpenOrders() {
@@ -169,12 +166,10 @@ public class CryptopiaPrivateImpl implements CryptopiaPrivate {
         return Collections.emptyList();
     }
 
-
     @Override
     public List<Transaction> getTransactions(@NonNull final String type) {
         return getTransactionsHelper("{\"Type\":\"" + type + "\"}");
     }
-
 
     @Override
     public List<Transaction> getTransactions(@NonNull final String type, @NonNull final Integer count) {
@@ -190,7 +185,6 @@ public class CryptopiaPrivateImpl implements CryptopiaPrivate {
         }
         return Collections.emptyList();
     }
-
 
     @Override
     public Optional<SubmitTrade> submitTrade(@NonNull final String market, @NonNull final String type, @NonNull BigDecimal rate, @NonNull BigDecimal amount) {
@@ -223,7 +217,6 @@ public class CryptopiaPrivateImpl implements CryptopiaPrivate {
     public List<Long> cancelTradesByTradePairId(@NonNull final Integer tradePairId) {
         return cancelTradeHelper("{\"Type\":\"TradePair\",\"TradePairId\":" + tradePairId + "}");
     }
-
 
     private List<Long> cancelTradeHelper(@NonNull final String jsonPostParam) {
         String endpoint = "CancelTrade";
