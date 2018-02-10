@@ -1,5 +1,6 @@
 package biz.stevens.datatypes;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
 import lombok.ToString;
@@ -7,54 +8,72 @@ import lombok.ToString;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+import static biz.stevens.datatypes.FieldNames.*;
+
 @Getter
 @ToString
 public class Market {
-    @SerializedName("TradePairId")
+    @JsonProperty(TRADE_PAIR_ID)
+    @SerializedName(TRADE_PAIR_ID)
     private BigInteger tradePairId;
 
-    @SerializedName("Label")
+    @JsonProperty(LABEL)
+    @SerializedName(LABEL)
     private String label;
 
-    @SerializedName("AskPrice")
+    @JsonProperty(ASK_PRICE)
+    @SerializedName(ASK_PRICE)
     private BigDecimal askPrice;
 
-    @SerializedName("BidPrice")
+    @JsonProperty(BID_PRICE)
+    @SerializedName(BID_PRICE)
     private BigDecimal bidPrice;
 
-    @SerializedName("Low")
+    @JsonProperty(LOW)
+    @SerializedName(LOW)
     private BigDecimal low;
 
-    @SerializedName("High")
+    @JsonProperty(HIGH)
+    @SerializedName(HIGH)
     private BigDecimal high;
 
-    @SerializedName("Volume")
+    @JsonProperty(VOLUME)
+    @SerializedName(VOLUME)
     private BigDecimal volume;
 
-    @SerializedName("LastPrice")
+    @JsonProperty(LAST_PRICE)
+    @SerializedName(LAST_PRICE)
     private BigDecimal lastPrice;
 
-    @SerializedName("BuyVolume")
+    @JsonProperty(BUY_VOLUME)
+    @SerializedName(BUY_VOLUME)
     private BigDecimal buyVolume;
 
-    @SerializedName("SellVolume")
+    @JsonProperty(SELL_VOLUME)
+    @SerializedName(SELL_VOLUME)
     private BigDecimal sellVolume;
 
-    @SerializedName("Change")
+    @JsonProperty(CHANGE)
+    @SerializedName(CHANGE)
     private BigDecimal change;
 
-    @SerializedName("Open")
+    @JsonProperty(OPEN)
+    @SerializedName(OPEN)
     private BigDecimal open;
 
-    @SerializedName("Close")
+    @JsonProperty(CLOSE)
+    @SerializedName(CLOSE)
     private BigDecimal close;
 
-    @SerializedName("BaseVolume")
+    @JsonProperty(BASE_VOLUME)
+    @SerializedName(BASE_VOLUME)
     private BigDecimal baseVolume;
 
-    @SerializedName("BuyBaseVolume")
+    @JsonProperty(BUY_BASE_VOLUME)
+    @SerializedName(BUY_BASE_VOLUME)
     private BigDecimal buyBaseVolume;
 
-    @SerializedName("SellBaseVolume")
+    @JsonProperty(SELL_BASE_VOLUME)
+    @SerializedName(SELL_BASE_VOLUME)
     private BigDecimal sellBaseVolume;
 }
