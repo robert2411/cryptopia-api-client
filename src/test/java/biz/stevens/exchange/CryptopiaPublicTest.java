@@ -158,7 +158,7 @@ public class CryptopiaPublicTest {
 
     @Test
     public void testGetMarketMarket() {
-        String response = getResourceAsString("getMarketHistoryMarketResponse.json");
+        String response = getResourceAsString("getMarketMarketResponse.json");
         wireMockServer.stubFor(get(urlEqualTo("/GetMarket/DOT_BTC/24"))
                 .willReturn(aResponse()
                         .withHeader("Content-Type", "application/json")
