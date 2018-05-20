@@ -49,11 +49,8 @@ public class CryptopiaPublicTest {
 
     @Test
     public void testGetCurrencies() {
-        String response = getResourceAsString("getCurrenciesResponse.json");
-        wireMockServer.stubFor(get(urlEqualTo("/GetCurrencies"))
-                .willReturn(aResponse()
-                        .withHeader("Content-Type", "application/json")
-                        .withBody(response)));
+        addMockEndpoint("/GetCurrencies", "getCurrenciesResponse.json");
+
         List<Currency> currencies = this.cryptopia.getCurrencies();
 
         Assert.assertFalse(currencies.isEmpty());
@@ -78,11 +75,8 @@ public class CryptopiaPublicTest {
 
     @Test
     public void testGetTradePairs() {
-        String response = getResourceAsString("getTradePairsResponse.json");
-        wireMockServer.stubFor(get(urlEqualTo("/GetTradePairs"))
-                .willReturn(aResponse()
-                        .withHeader("Content-Type", "application/json")
-                        .withBody(response)));
+        addMockEndpoint("/GetTradePairs", "getTradePairsResponse.json");
+
         List<TradePair> tradePairs = this.cryptopia.getTradePairs();
         Assert.assertFalse(tradePairs.isEmpty());
         TradePair tradePair = tradePairs.get(0);
@@ -105,11 +99,8 @@ public class CryptopiaPublicTest {
 
     @Test
     public void testGetMarkets() {
-        String response = getResourceAsString("getMarketsResponse.json");
-        wireMockServer.stubFor(get(urlEqualTo("/GetMarkets"))
-                .willReturn(aResponse()
-                        .withHeader("Content-Type", "application/json")
-                        .withBody(response)));
+        addMockEndpoint("/GetMarkets", "getMarketsResponse.json");
+
         List<Market> markets = this.cryptopia.getMarkets();
         Assert.assertFalse(markets.isEmpty());
         Market market = markets.get(0);
@@ -119,11 +110,8 @@ public class CryptopiaPublicTest {
 
     @Test
     public void testGetMarketsHours() {
-        String response = getResourceAsString("getMarketsHoursResponse.json");
-        wireMockServer.stubFor(get(urlEqualTo("/GetMarkets/12"))
-                .willReturn(aResponse()
-                        .withHeader("Content-Type", "application/json")
-                        .withBody(response)));
+        addMockEndpoint("/GetMarkets/12", "getMarketsHoursResponse.json");
+
         List<Market> markets = this.cryptopia.getMarkets(HOURS);
         Assert.assertFalse(markets.isEmpty());
         Market market = markets.get(0);
@@ -132,11 +120,8 @@ public class CryptopiaPublicTest {
 
     @Test
     public void testGetMarketsBaseMarket() {
-        String response = getResourceAsString("getMarketsBaseMarketResponse.json");
-        wireMockServer.stubFor(get(urlEqualTo("/GetMarkets/BTC"))
-                .willReturn(aResponse()
-                        .withHeader("Content-Type", "application/json")
-                        .withBody(response)));
+        addMockEndpoint("/GetMarkets/BTC", "getMarketsBaseMarketResponse.json");
+
         List<Market> markets = this.cryptopia.getMarkets(BASE_MARKET);
         Assert.assertFalse(markets.isEmpty());
         Market market = markets.get(0);
@@ -145,11 +130,8 @@ public class CryptopiaPublicTest {
 
     @Test
     public void testGetMarketsBaseMarketHours() {
-        String response = getResourceAsString("getMarketsBaseMarketHoursResponse.json");
-        wireMockServer.stubFor(get(urlEqualTo("/GetMarkets/BTC/12"))
-                .willReturn(aResponse()
-                        .withHeader("Content-Type", "application/json")
-                        .withBody(response)));
+        addMockEndpoint("/GetMarkets/BTC/12", "getMarketsBaseMarketHoursResponse.json");
+
         List<Market> markets = this.cryptopia.getMarkets(BASE_MARKET, HOURS);
         Assert.assertFalse(markets.isEmpty());
         Market market = markets.get(0);
@@ -158,11 +140,8 @@ public class CryptopiaPublicTest {
 
     @Test
     public void testGetMarketMarket() {
-        String response = getResourceAsString("getMarketMarketResponse.json");
-        wireMockServer.stubFor(get(urlEqualTo("/GetMarket/DOT_BTC/24"))
-                .willReturn(aResponse()
-                        .withHeader("Content-Type", "application/json")
-                        .withBody(response)));
+        addMockEndpoint("/GetMarket/DOT_BTC/24", "getMarketMarketResponse.json");
+
         Optional<Market> market = this.cryptopia.getMarket(MARKET);
         Assert.assertTrue(market.isPresent());
         assertMarket(market.get());
@@ -170,11 +149,8 @@ public class CryptopiaPublicTest {
 
     @Test
     public void testGetMarketMarketHours() {
-        String response = getResourceAsString("getMarketMarketHoursResponse.json");
-        wireMockServer.stubFor(get(urlEqualTo("/GetMarket/DOT_BTC/12"))
-                .willReturn(aResponse()
-                        .withHeader("Content-Type", "application/json")
-                        .withBody(response)));
+        addMockEndpoint("/GetMarket/DOT_BTC/12", "getMarketMarketHoursResponse.json");
+
         Optional<Market> market = this.cryptopia.getMarket(MARKET, HOURS);
         Assert.assertTrue(market.isPresent());
         assertMarket(market.get());
@@ -182,11 +158,7 @@ public class CryptopiaPublicTest {
 
     @Test
     public void testGetMarketHistoryMarketHours() {
-        String response = getResourceAsString("getMarketHistoryMarketHoursResponse.json");
-        wireMockServer.stubFor(get(urlEqualTo("/GetMarketHistory/DOT_BTC/12"))
-                .willReturn(aResponse()
-                        .withHeader("Content-Type", "application/json")
-                        .withBody(response)));
+        addMockEndpoint("/GetMarketHistory/DOT_BTC/12", "getMarketHistoryMarketHoursResponse.json");
 
         List<MarketHistory> marketHistories = this.cryptopia.getMarketHistory(MARKET, HOURS);
         Assert.assertFalse(marketHistories.isEmpty());
@@ -199,11 +171,7 @@ public class CryptopiaPublicTest {
 
     @Test
     public void testGetMarketHistoryMarket() {
-        String response = getResourceAsString("getMarketHistoryMarketResponse.json");
-        wireMockServer.stubFor(get(urlEqualTo("/GetMarketHistory/DOT_BTC/24"))
-                .willReturn(aResponse()
-                        .withHeader("Content-Type", "application/json")
-                        .withBody(response)));
+        addMockEndpoint("/GetMarketHistory/DOT_BTC/24", "getMarketHistoryMarketResponse.json");
 
         List<MarketHistory> marketHistories = this.cryptopia.getMarketHistory(MARKET);
         Assert.assertFalse(marketHistories.isEmpty());
@@ -215,11 +183,7 @@ public class CryptopiaPublicTest {
 
     @Test
     public void testGetMarketOrdersMarket() {
-        String response = getResourceAsString("getMarketOrdersMarketResponse.json");
-        wireMockServer.stubFor(get(urlEqualTo("/GetMarketOrders/DOT_BTC/50"))
-                .willReturn(aResponse()
-                        .withHeader("Content-Type", "application/json")
-                        .withBody(response)));
+        addMockEndpoint("/GetMarketOrders/DOT_BTC/50", "getMarketOrdersMarketResponse.json");
 
         Optional<MarketOrders> marketOrders = this.cryptopia.getMarketOrders(MARKET);
         Assert.assertTrue(marketOrders.isPresent());
@@ -237,11 +201,8 @@ public class CryptopiaPublicTest {
 
     @Test
     public void testGetMarketOrdersMarketOrderCount() {
-        String response = getResourceAsString("getMarketOrdersMarketOrderCountResponse.json");
-        wireMockServer.stubFor(get(urlEqualTo("/GetMarketOrders/DOT_BTC/10"))
-                .willReturn(aResponse()
-                        .withHeader("Content-Type", "application/json")
-                        .withBody(response)));
+        addMockEndpoint("/GetMarketOrders/DOT_BTC/10", "getMarketOrdersMarketOrderCountResponse.json");
+
 
         Optional<MarketOrders> marketOrders = this.cryptopia.getMarketOrders(MARKET, ORDER_COUNT);
         Assert.assertTrue(marketOrders.isPresent());
@@ -261,11 +222,7 @@ public class CryptopiaPublicTest {
 
     @Test
     public void testGetMarketOrderGroupsMarket() {
-        String response = getResourceAsString("getMarketOrderGroupsMarketResponse.json");
-        wireMockServer.stubFor(get(urlEqualTo("/GetMarketOrderGroups/DOT_BTC/100"))
-                .willReturn(aResponse()
-                        .withHeader("Content-Type", "application/json")
-                        .withBody(response)));
+        addMockEndpoint("/GetMarketOrderGroups/DOT_BTC/100", "getMarketOrderGroupsMarketResponse.json");
 
         List<MarketOrderGroup> marketOrderGroups = this.cryptopia.getMarketOrderGroups(MARKET);
         Assert.assertFalse(marketOrderGroups.isEmpty());
@@ -289,11 +246,7 @@ public class CryptopiaPublicTest {
 
     @Test
     public void testGetMarketOrderGroupsOrderCountMarket() {
-        String response = getResourceAsString("getMarketOrderGroupsOrderCountMarketResponse.json");
-        wireMockServer.stubFor(get(urlEqualTo("/GetMarketOrderGroups/DOT_BTC/10"))
-                .willReturn(aResponse()
-                        .withHeader("Content-Type", "application/json")
-                        .withBody(response)));
+        addMockEndpoint("/GetMarketOrderGroups/DOT_BTC/10", "getMarketOrderGroupsOrderCountMarketResponse.json");
 
         List<MarketOrderGroup> marketOrderGroups = this.cryptopia.getMarketOrderGroups(ORDER_COUNT, MARKET);
         Assert.assertFalse(marketOrderGroups.isEmpty());
@@ -313,6 +266,14 @@ public class CryptopiaPublicTest {
 
         assertOrder(buyOrderList.get(0));
         assertOrder(sellOrderList.get(0));
+    }
+
+    private void addMockEndpoint(String endpoint, String resouceName){
+        String response = getResourceAsString("public/" + resouceName);
+        wireMockServer.stubFor(get(urlEqualTo(endpoint))
+                .willReturn(aResponse()
+                        .withHeader("Content-Type", "application/json")
+                        .withBody(response)));
     }
 
     private void assertMarket(Market market) {
