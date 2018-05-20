@@ -1,0 +1,23 @@
+{
+  "Success": true,
+  "Message": null,
+  "Data": {
+    "TradePairId": 100,
+    "Label": "DOT/BTC",
+    "AskPrice": 0.00000214,
+    "BidPrice": 0.00000208,
+    "Low": 0.00000209,
+    "High": 0.00000225,
+    "Volume": 523520.31423284,
+    "LastPrice": 0.00000213,
+    "BuyVolume": 36912182.10817394,
+    "SellVolume": 55776691.17719491,
+    "Change": -0.47,
+    "Open": 0.00000214,
+    "Close": 0.00000213,
+    "BaseVolume": 1.12136100,
+    "BuyBaseVolume": 28.98548749,
+    "SellBaseVolume": 12225589.27123575
+  },
+  "Error": null
+}

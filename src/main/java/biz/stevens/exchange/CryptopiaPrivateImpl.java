@@ -265,13 +265,14 @@ public class CryptopiaPrivateImpl implements CryptopiaPrivate {
 
     //Request data in json body
     private Optional<String> privateCall(@NonNull final String endpoint, @NonNull final String jSonPostParam) {
+        Response response = null;
         try {
             //https://www.cryptopia.co.nz/Forum/Thread/262
             final String nonce = getNonce();
             final String reqSignature = getReqSignature(nonce, endpoint, jSonPostParam);
             final String AUTH = getAUTH(nonce, reqSignature);
 
-            Response response = given()
+            response = given()
                     .contentType(ContentType.JSON)
                     .header("Authorization", AUTH)
                     .body(jSonPostParam)
@@ -285,6 +286,11 @@ public class CryptopiaPrivateImpl implements CryptopiaPrivate {
             return Optional.ofNullable(response.asString());
         } catch (Exception e) {
             log.error("Something went wrong while making publicCall: [{}] Exception [{}]", endpoint, e);
+            return Optional.empty();
+        } catch (AssertionError e) {
+            if (response != null) {
+                log.info("Original response [{}] status code [{}] ", response.asString(), response.statusCode());
+            }
             return Optional.empty();
         }
     }

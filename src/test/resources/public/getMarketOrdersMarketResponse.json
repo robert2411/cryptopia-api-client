@@ -1,0 +1,711 @@
+{
+  "Success": true,
+  "Message": null,
+  "Data": {
+    "Buy": [
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000208,
+        "Volume": 3789.13986175,
+        "Total": 0.00788141
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000207,
+        "Volume": 24425.05809637,
+        "Total": 0.05055987
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000206,
+        "Volume": 123715.10740755,
+        "Total": 0.25485312
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000205,
+        "Volume": 57667.62572416,
+        "Total": 0.11821863
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000204,
+        "Volume": 70415.38532901,
+        "Total": 0.14364739
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000203,
+        "Volume": 66927.03755052,
+        "Total": 0.13586189
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000202,
+        "Volume": 88931.04879350,
+        "Total": 0.17964072
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000201,
+        "Volume": 2153.89950000,
+        "Total": 0.00432934
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000200,
+        "Volume": 72016.38223555,
+        "Total": 0.14403276
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000199,
+        "Volume": 531.51649777,
+        "Total": 0.00105772
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000198,
+        "Volume": 65662.77545918,
+        "Total": 0.13001230
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000197,
+        "Volume": 1000.00000000,
+        "Total": 0.00197000
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000196,
+        "Volume": 94506.55831194,
+        "Total": 0.18523285
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000195,
+        "Volume": 21973.27017158,
+        "Total": 0.04284788
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000194,
+        "Volume": 82229.63855793,
+        "Total": 0.15952550
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000193,
+        "Volume": 58598.75564933,
+        "Total": 0.11309560
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000192,
+        "Volume": 744903.95095010,
+        "Total": 1.43021559
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000191,
+        "Volume": 751343.52880626,
+        "Total": 1.43506614
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000190,
+        "Volume": 182608.36899997,
+        "Total": 0.34695590
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000189,
+        "Volume": 30018.96652198,
+        "Total": 0.05673585
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000188,
+        "Volume": 30000.00000000,
+        "Total": 0.05640000
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000187,
+        "Volume": 32812.41794486,
+        "Total": 0.06135922
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000186,
+        "Volume": 34859.63556757,
+        "Total": 0.06483892
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000185,
+        "Volume": 32271.89566812,
+        "Total": 0.05970301
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000184,
+        "Volume": 60000.00000000,
+        "Total": 0.11040000
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000183,
+        "Volume": 37897.24267311,
+        "Total": 0.06935195
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000182,
+        "Volume": 147417.58241758,
+        "Total": 0.26830000
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000181,
+        "Volume": 158425.40601242,
+        "Total": 0.28674998
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000180,
+        "Volume": 30388.11266357,
+        "Total": 0.05469860
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000179,
+        "Volume": 57877.20648089,
+        "Total": 0.10360020
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000178,
+        "Volume": 30000.00000000,
+        "Total": 0.05340000
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000177,
+        "Volume": 107776.53080228,
+        "Total": 0.19076446
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000176,
+        "Volume": 30000.00000000,
+        "Total": 0.05280000
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000175,
+        "Volume": 48473.76937581,
+        "Total": 0.08482910
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000174,
+        "Volume": 30000.00000000,
+        "Total": 0.05220000
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000173,
+        "Volume": 31518.96207585,
+        "Total": 0.05452780
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000172,
+        "Volume": 36001.00000000,
+        "Total": 0.06192172
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000171,
+        "Volume": 94961.11286199,
+        "Total": 0.16238350
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000170,
+        "Volume": 31806.41070800,
+        "Total": 0.05407090
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000169,
+        "Volume": 42108.42308736,
+        "Total": 0.07116324
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000168,
+        "Volume": 70000.00000000,
+        "Total": 0.11760000
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000167,
+        "Volume": 70000.00000000,
+        "Total": 0.11690000
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000166,
+        "Volume": 30305.77399418,
+        "Total": 0.05030758
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000165,
+        "Volume": 33709.70180850,
+        "Total": 0.05562101
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000164,
+        "Volume": 143410.36220242,
+        "Total": 0.23519299
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000163,
+        "Volume": 36122.69938650,
+        "Total": 0.05888000
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000162,
+        "Volume": 76203.70370370,
+        "Total": 0.12345000
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000161,
+        "Volume": 45000.00000000,
+        "Total": 0.07245000
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000160,
+        "Volume": 76924.53842315,
+        "Total": 0.12307926
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000159,
+        "Volume": 45000.00000000,
+        "Total": 0.07155000
+      }
+    ],
+    "Sell": [
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000214,
+        "Volume": 22000.00000000,
+        "Total": 0.04708000
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000215,
+        "Volume": 2043.81280683,
+        "Total": 0.00439420
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000220,
+        "Volume": 2970.52120712,
+        "Total": 0.00653515
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000221,
+        "Volume": 16992.67699153,
+        "Total": 0.03755382
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000223,
+        "Volume": 5606.98483661,
+        "Total": 0.01250358
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000224,
+        "Volume": 9651.47741899,
+        "Total": 0.02161931
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000225,
+        "Volume": 168686.42189511,
+        "Total": 0.37954445
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000226,
+        "Volume": 43679.04829610,
+        "Total": 0.09871465
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000227,
+        "Volume": 849692.11219124,
+        "Total": 1.92880109
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000229,
+        "Volume": 249.37162712,
+        "Total": 0.00057106
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000230,
+        "Volume": 32330.96805105,
+        "Total": 0.07436123
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000231,
+        "Volume": 44557.07762557,
+        "Total": 0.10292685
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000232,
+        "Volume": 5275.65872821,
+        "Total": 0.01223953
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000234,
+        "Volume": 45998.87262248,
+        "Total": 0.10763736
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000235,
+        "Volume": 1244671.29082348,
+        "Total": 2.92497753
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000236,
+        "Volume": 975.45392305,
+        "Total": 0.00230207
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000237,
+        "Volume": 1312.50152886,
+        "Total": 0.00311063
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000238,
+        "Volume": 5946.29423036,
+        "Total": 0.01415218
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000239,
+        "Volume": 73814.59028560,
+        "Total": 0.17641687
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000240,
+        "Volume": 829363.08962780,
+        "Total": 1.99047142
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000241,
+        "Volume": 32795.47942583,
+        "Total": 0.07903711
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000242,
+        "Volume": 48073.62535904,
+        "Total": 0.11633817
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000243,
+        "Volume": 37685.23709361,
+        "Total": 0.09157513
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000244,
+        "Volume": 100117.03028982,
+        "Total": 0.24428555
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000245,
+        "Volume": 80755.32721411,
+        "Total": 0.19785055
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000246,
+        "Volume": 40876.82262327,
+        "Total": 0.10055698
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000247,
+        "Volume": 43003.97806808,
+        "Total": 0.10621983
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000248,
+        "Volume": 39724.25942695,
+        "Total": 0.09851616
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000249,
+        "Volume": 36520.45328737,
+        "Total": 0.09093593
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000250,
+        "Volume": 108285.54561060,
+        "Total": 0.27071386
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000251,
+        "Volume": 30647.56198187,
+        "Total": 0.07692538
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000252,
+        "Volume": 20251.47209757,
+        "Total": 0.05103371
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000253,
+        "Volume": 24170.11799551,
+        "Total": 0.06115040
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000254,
+        "Volume": 55646.36907003,
+        "Total": 0.14134178
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000255,
+        "Volume": 25690.21924402,
+        "Total": 0.06551006
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000256,
+        "Volume": 112819.54528982,
+        "Total": 0.28881804
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000257,
+        "Volume": 111258.13918645,
+        "Total": 0.28593342
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000258,
+        "Volume": 5796.12253567,
+        "Total": 0.01495400
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000259,
+        "Volume": 11037.79018678,
+        "Total": 0.02858788
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000260,
+        "Volume": 142409.15357181,
+        "Total": 0.37026380
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000262,
+        "Volume": 256.41025642,
+        "Total": 0.00067179
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000264,
+        "Volume": 9837.81706853,
+        "Total": 0.02597184
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000265,
+        "Volume": 40687.44735755,
+        "Total": 0.10782174
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000266,
+        "Volume": 249106.75617010,
+        "Total": 0.66262397
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000267,
+        "Volume": 14670.31665662,
+        "Total": 0.03916975
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000268,
+        "Volume": 62256.00381737,
+        "Total": 0.16684609
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000269,
+        "Volume": 15820.33588765,
+        "Total": 0.04255670
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000270,
+        "Volume": 631912.66118881,
+        "Total": 1.70616419
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000271,
+        "Volume": 10801.11576834,
+        "Total": 0.02927102
+      },
+      {
+        "TradePairId": 100,
+        "Label": "DOT/BTC",
+        "Price": 0.00000272,
+        "Volume": 32746.16082077,
+        "Total": 0.08906956
+      }
+    ]
+  },
+  "Error": null
+}
