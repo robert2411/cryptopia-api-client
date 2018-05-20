@@ -1,0 +1,1123 @@
+{
+  "Success": true,
+  "Message": null,
+  "Data": [
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000213,
+      "Amount": 234.74646950,
+      "Total": 0.00050001,
+      "Timestamp": 1526824691
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000215,
+      "Amount": 355.80922743,
+      "Total": 0.00076499,
+      "Timestamp": 1526822948
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000215,
+      "Amount": 600.37796574,
+      "Total": 0.00129081,
+      "Timestamp": 1526822894
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000211,
+      "Amount": 16135.34248889,
+      "Total": 0.03404557,
+      "Timestamp": 1526822047
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000211,
+      "Amount": 50001.36522098,
+      "Total": 0.10550288,
+      "Timestamp": 1526819980
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000211,
+      "Amount": 3132.26872744,
+      "Total": 0.00660909,
+      "Timestamp": 1526819702
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000213,
+      "Amount": 16542.88410321,
+      "Total": 0.03523634,
+      "Timestamp": 1526819702
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000211,
+      "Amount": 67247.01821882,
+      "Total": 0.14189121,
+      "Timestamp": 1526818668
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000211,
+      "Amount": 364.98522954,
+      "Total": 0.00077012,
+      "Timestamp": 1526818593
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000212,
+      "Amount": 3635.45421006,
+      "Total": 0.00770716,
+      "Timestamp": 1526818394
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000213,
+      "Amount": 583.91922581,
+      "Total": 0.00124375,
+      "Timestamp": 1526817045
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000209,
+      "Amount": 449.79288832,
+      "Total": 0.00094007,
+      "Timestamp": 1526815757
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000209,
+      "Amount": 300.00000000,
+      "Total": 0.00062700,
+      "Timestamp": 1526815757
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000209,
+      "Amount": 240.00000000,
+      "Total": 0.00050160,
+      "Timestamp": 1526815757
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000210,
+      "Amount": 259.92853107,
+      "Total": 0.00054585,
+      "Timestamp": 1526815437
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000210,
+      "Amount": 332.66799735,
+      "Total": 0.00069860,
+      "Timestamp": 1526815395
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000211,
+      "Amount": 1987.37402007,
+      "Total": 0.00419336,
+      "Timestamp": 1526815310
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000211,
+      "Amount": 593.78399599,
+      "Total": 0.00125288,
+      "Timestamp": 1526815306
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000211,
+      "Amount": 583.03066350,
+      "Total": 0.00123019,
+      "Timestamp": 1526815306
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000211,
+      "Amount": 1987.37402007,
+      "Total": 0.00419336,
+      "Timestamp": 1526815306
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000211,
+      "Amount": 513.49946777,
+      "Total": 0.00108348,
+      "Timestamp": 1526815305
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000214,
+      "Amount": 36910.20711168,
+      "Total": 0.07898784,
+      "Timestamp": 1526814867
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000215,
+      "Amount": 2550.62065358,
+      "Total": 0.00548383,
+      "Timestamp": 1526814088
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000214,
+      "Amount": 6000.00000000,
+      "Total": 0.01284000,
+      "Timestamp": 1526813965
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000215,
+      "Amount": 1715.94907407,
+      "Total": 0.00368929,
+      "Timestamp": 1526813780
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000215,
+      "Amount": 500.00000000,
+      "Total": 0.00107500,
+      "Timestamp": 1526813470
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000214,
+      "Amount": 3417.45131166,
+      "Total": 0.00731335,
+      "Timestamp": 1526812371
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000214,
+      "Amount": 4763.72204566,
+      "Total": 0.01019437,
+      "Timestamp": 1526812118
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000215,
+      "Amount": 1867.65074502,
+      "Total": 0.00401545,
+      "Timestamp": 1526812118
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000215,
+      "Amount": 958.00000000,
+      "Total": 0.00205970,
+      "Timestamp": 1526812118
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000215,
+      "Amount": 3003.35730468,
+      "Total": 0.00645722,
+      "Timestamp": 1526812118
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000215,
+      "Amount": 81.95114818,
+      "Total": 0.00017619,
+      "Timestamp": 1526807226
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000215,
+      "Amount": 352.41466746,
+      "Total": 0.00075769,
+      "Timestamp": 1526807226
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000216,
+      "Amount": 1715.94907407,
+      "Total": 0.00370645,
+      "Timestamp": 1526807217
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000215,
+      "Amount": 19.67835580,
+      "Total": 0.00004231,
+      "Timestamp": 1526804129
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000215,
+      "Amount": 9283.75806526,
+      "Total": 0.01996008,
+      "Timestamp": 1526804129
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000219,
+      "Amount": 2696.56357893,
+      "Total": 0.00590547,
+      "Timestamp": 1526803815
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000219,
+      "Amount": 919.47830989,
+      "Total": 0.00201366,
+      "Timestamp": 1526803704
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000219,
+      "Amount": 22000.00000000,
+      "Total": 0.04818000,
+      "Timestamp": 1526803550
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000225,
+      "Amount": 6441.11788200,
+      "Total": 0.01449252,
+      "Timestamp": 1526803415
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000224,
+      "Amount": 706.56682028,
+      "Total": 0.00158271,
+      "Timestamp": 1526803415
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000224,
+      "Amount": 1000.00000000,
+      "Total": 0.00224000,
+      "Timestamp": 1526803415
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000221,
+      "Amount": 1000.00000000,
+      "Total": 0.00221000,
+      "Timestamp": 1526803415
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000221,
+      "Amount": 1000.00000000,
+      "Total": 0.00221000,
+      "Timestamp": 1526803415
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000221,
+      "Amount": 445.04539308,
+      "Total": 0.00098355,
+      "Timestamp": 1526803415
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000219,
+      "Amount": 937.57142857,
+      "Total": 0.00205328,
+      "Timestamp": 1526802596
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000219,
+      "Amount": 1482.87658916,
+      "Total": 0.00324750,
+      "Timestamp": 1526801429
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000219,
+      "Amount": 2068.61392423,
+      "Total": 0.00453026,
+      "Timestamp": 1526800666
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000219,
+      "Amount": 2856.66744179,
+      "Total": 0.00625610,
+      "Timestamp": 1526800496
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000219,
+      "Amount": 14761.68582489,
+      "Total": 0.03232809,
+      "Timestamp": 1526800496
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000217,
+      "Amount": 2068.61392423,
+      "Total": 0.00448889,
+      "Timestamp": 1526793855
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000216,
+      "Amount": 1525.76546528,
+      "Total": 0.00329565,
+      "Timestamp": 1526793531
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000216,
+      "Amount": 236.58427967,
+      "Total": 0.00051102,
+      "Timestamp": 1526793454
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000217,
+      "Amount": 236.01059918,
+      "Total": 0.00051214,
+      "Timestamp": 1526793449
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000216,
+      "Amount": 285.00000000,
+      "Total": 0.00061560,
+      "Timestamp": 1526792841
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000217,
+      "Amount": 2299.54836870,
+      "Total": 0.00499002,
+      "Timestamp": 1526792798
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000216,
+      "Amount": 285.00000000,
+      "Total": 0.00061560,
+      "Timestamp": 1526785861
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000215,
+      "Amount": 4844.62962963,
+      "Total": 0.01041595,
+      "Timestamp": 1526783954
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000215,
+      "Amount": 7037.38425926,
+      "Total": 0.01513038,
+      "Timestamp": 1526783892
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000216,
+      "Amount": 3937.23256102,
+      "Total": 0.00850442,
+      "Timestamp": 1526782976
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000216,
+      "Amount": 4844.62962963,
+      "Total": 0.01046440,
+      "Timestamp": 1526782976
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000216,
+      "Amount": 7037.38425926,
+      "Total": 0.01520075,
+      "Timestamp": 1526782976
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000217,
+      "Amount": 445.04539308,
+      "Total": 0.00096575,
+      "Timestamp": 1526782976
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000222,
+      "Amount": 0.00000020,
+      "Total": 0.00000000,
+      "Timestamp": 1526782976
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000222,
+      "Amount": 604.00878004,
+      "Total": 0.00134090,
+      "Timestamp": 1526781396
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000222,
+      "Amount": 436.76573793,
+      "Total": 0.00096962,
+      "Timestamp": 1526781394
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000222,
+      "Amount": 442.10207099,
+      "Total": 0.00098147,
+      "Timestamp": 1526781394
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000217,
+      "Amount": 2856.66744179,
+      "Total": 0.00619897,
+      "Timestamp": 1526781028
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000217,
+      "Amount": 706.56682028,
+      "Total": 0.00153325,
+      "Timestamp": 1526780933
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000219,
+      "Amount": 436.76573793,
+      "Total": 0.00095652,
+      "Timestamp": 1526780894
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000222,
+      "Amount": 253.40907589,
+      "Total": 0.00056257,
+      "Timestamp": 1526778664
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000221,
+      "Amount": 253.40907589,
+      "Total": 0.00056003,
+      "Timestamp": 1526778539
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000223,
+      "Amount": 1409.10964951,
+      "Total": 0.00314231,
+      "Timestamp": 1526778277
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000225,
+      "Amount": 12168.32363821,
+      "Total": 0.02737873,
+      "Timestamp": 1526777059
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000225,
+      "Amount": 250.00000000,
+      "Total": 0.00056250,
+      "Timestamp": 1526777059
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000225,
+      "Amount": 818.74693723,
+      "Total": 0.00184218,
+      "Timestamp": 1526777059
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000224,
+      "Amount": 684.48611111,
+      "Total": 0.00153325,
+      "Timestamp": 1526777059
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000224,
+      "Amount": 1000.00000000,
+      "Total": 0.00224000,
+      "Timestamp": 1526777059
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000221,
+      "Amount": 1000.00000000,
+      "Total": 0.00221000,
+      "Timestamp": 1526777059
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000220,
+      "Amount": 330.29179737,
+      "Total": 0.00072664,
+      "Timestamp": 1526777059
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000220,
+      "Amount": 336.25628141,
+      "Total": 0.00073976,
+      "Timestamp": 1526777059
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000220,
+      "Amount": 1000.00000000,
+      "Total": 0.00220000,
+      "Timestamp": 1526777059
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000219,
+      "Amount": 1271.22973423,
+      "Total": 0.00278399,
+      "Timestamp": 1526777059
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000219,
+      "Amount": 7256.93621309,
+      "Total": 0.01589269,
+      "Timestamp": 1526777059
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000215,
+      "Amount": 930.04921235,
+      "Total": 0.00199961,
+      "Timestamp": 1526775486
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000219,
+      "Amount": 9069.95078765,
+      "Total": 0.01986319,
+      "Timestamp": 1526772793
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000219,
+      "Amount": 1276.06180633,
+      "Total": 0.00279458,
+      "Timestamp": 1526768262
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000219,
+      "Amount": 276.68322921,
+      "Total": 0.00060594,
+      "Timestamp": 1526768116
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000219,
+      "Amount": 1023.74050040,
+      "Total": 0.00224199,
+      "Timestamp": 1526767774
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000219,
+      "Amount": 2185.90811994,
+      "Total": 0.00478714,
+      "Timestamp": 1526767773
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000215,
+      "Amount": 7256.93621309,
+      "Total": 0.01560241,
+      "Timestamp": 1526767549
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000219,
+      "Amount": 1000.00000000,
+      "Total": 0.00219000,
+      "Timestamp": 1526765652
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000216,
+      "Amount": 1059.12702896,
+      "Total": 0.00228771,
+      "Timestamp": 1526763681
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000215,
+      "Amount": 1253.26574574,
+      "Total": 0.00269452,
+      "Timestamp": 1526760997
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000214,
+      "Amount": 1102.88520526,
+      "Total": 0.00236017,
+      "Timestamp": 1526760860
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000215,
+      "Amount": 3177.80281298,
+      "Total": 0.00683228,
+      "Timestamp": 1526760825
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000216,
+      "Amount": 684.48611111,
+      "Total": 0.00147849,
+      "Timestamp": 1526760825
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000215,
+      "Amount": 458.00000000,
+      "Total": 0.00098470,
+      "Timestamp": 1526756303
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000219,
+      "Amount": 3169.72595151,
+      "Total": 0.00694170,
+      "Timestamp": 1526752897
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000218,
+      "Amount": 2105.93277670,
+      "Total": 0.00459093,
+      "Timestamp": 1526752897
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000216,
+      "Amount": 676.10612109,
+      "Total": 0.00146039,
+      "Timestamp": 1526747854
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000212,
+      "Amount": 244.03282543,
+      "Total": 0.00051735,
+      "Timestamp": 1526747579
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000212,
+      "Amount": 3527.27964807,
+      "Total": 0.00747783,
+      "Timestamp": 1526746844
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000212,
+      "Amount": 11490.42294477,
+      "Total": 0.02435970,
+      "Timestamp": 1526746835
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000211,
+      "Amount": 1246.58925035,
+      "Total": 0.00263030,
+      "Timestamp": 1526746834
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000211,
+      "Amount": 569.33215593,
+      "Total": 0.00120129,
+      "Timestamp": 1526746492
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000211,
+      "Amount": 1259.79740196,
+      "Total": 0.00265817,
+      "Timestamp": 1526746488
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Buy",
+      "Price": 0.00000211,
+      "Amount": 1493.23627627,
+      "Total": 0.00315073,
+      "Timestamp": 1526746488
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000212,
+      "Amount": 879.78333496,
+      "Total": 0.00186514,
+      "Timestamp": 1526746483
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000210,
+      "Amount": 452.46748103,
+      "Total": 0.00095018,
+      "Timestamp": 1526746143
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000211,
+      "Amount": 1068.54921263,
+      "Total": 0.00225464,
+      "Timestamp": 1526745579
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000210,
+      "Amount": 1000.00000000,
+      "Total": 0.00210000,
+      "Timestamp": 1526744775
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000210,
+      "Amount": 4484.74094159,
+      "Total": 0.00941796,
+      "Timestamp": 1526744251
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000211,
+      "Amount": 3722.06298303,
+      "Total": 0.00785355,
+      "Timestamp": 1526744192
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000210,
+      "Amount": 17824.79138728,
+      "Total": 0.03743206,
+      "Timestamp": 1526744058
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000210,
+      "Amount": 330.29179737,
+      "Total": 0.00069361,
+      "Timestamp": 1526744058
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000212,
+      "Amount": 29202.47600534,
+      "Total": 0.06190925,
+      "Timestamp": 1526744058
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000213,
+      "Amount": 4719.34741784,
+      "Total": 0.01005221,
+      "Timestamp": 1526744058
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000212,
+      "Amount": 14584.29008512,
+      "Total": 0.03091869,
+      "Timestamp": 1526743338
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000214,
+      "Amount": 2651.47741899,
+      "Total": 0.00567416,
+      "Timestamp": 1526743338
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000214,
+      "Amount": 17061.23419359,
+      "Total": 0.03651104,
+      "Timestamp": 1526743338
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000214,
+      "Amount": 932.71401123,
+      "Total": 0.00199601,
+      "Timestamp": 1526743338
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000214,
+      "Amount": 278.41046878,
+      "Total": 0.00059580,
+      "Timestamp": 1526743338
+    },
+    {
+      "TradePairId": 100,
+      "Label": "DOT/BTC",
+      "Type": "Sell",
+      "Price": 0.00000214,
+      "Amount": 1653.90247542,
+      "Total": 0.00353935,
+      "Timestamp": 1526743338
+    }
+  ],
+  "Error": null
+}

@@ -21,6 +21,10 @@ public class OpenOrder {
     @SerializedName(TRADE_PAIR_ID)
     private BigInteger tradePairId;
 
+    @JsonProperty(MARKET)
+    @SerializedName(MARKET)
+    private String market;
+
     @JsonProperty(TYPE)
     @SerializedName(TYPE)
     private String type;
