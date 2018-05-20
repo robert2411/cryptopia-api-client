@@ -15,7 +15,7 @@ import static biz.stevens.datatypes.FieldNames.*;
 public class Currency {
     @JsonProperty(ID)
     @SerializedName(ID)
-    private BigInteger id;
+    private Integer id;
 
     @JsonProperty(NAME)
     @SerializedName(NAME)
@@ -37,6 +37,10 @@ public class Currency {
     @SerializedName(MIN_WITHDRAW)
     private BigDecimal minWithdraw;
 
+    @JsonProperty(MAX_WITHDRAW)
+    @SerializedName(MAX_WITHDRAW)
+    private BigDecimal maxWithdraw;
+
     @JsonProperty(MIN_BASE_TRADE)
     @SerializedName(MIN_BASE_TRADE)
     private BigDecimal minBaseTrade;
@@ -51,7 +55,7 @@ public class Currency {
 
     @JsonProperty(DEPOSIT_CONFIRMATIONS)
     @SerializedName(DEPOSIT_CONFIRMATIONS)
-    private BigInteger depositConfirmations;
+    private Integer depositConfirmations;
 
     @JsonProperty(STATUS)
     @SerializedName(STATUS)

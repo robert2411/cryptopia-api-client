@@ -45,6 +45,7 @@ public class FieldNames {
     public static final String MIN_BASE_TRADE = "MinBaseTrade";
     public static final String MIN_TIP = "MinTip";
     public static final String MIN_WITHDRAW = "MinWithdraw";
+    public static final String MAX_WITHDRAW = "MaxWithdraw";
     public static final String MINIMUM_BASE_TRADE = "MinimumBaseTrade";
     public static final String MINIMUM_PRICE = "MinimumPrice";
     public static final String MINIMUM_TRADE = "MinimumTrade";
