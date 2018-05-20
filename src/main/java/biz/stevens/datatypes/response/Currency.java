@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.ToString;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
 
 import static biz.stevens.datatypes.FieldNames.*;
 
