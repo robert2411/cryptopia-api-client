@@ -39,103 +39,103 @@ public class CryptopiaPrivateTest {
 
     @Test
     public void testGetGetBalance() {
-        addMockEndpoint("/GetBalance", "placeholder.json");
+        addMockEndpoint("/GetBalance", "getBalanceResponse.json");
         cryptopia.getBalance().stream().forEach(System.out::println);
     }
 
     @Test
     public void testGetGetBalanceCurrency() {
-        addMockEndpoint("/GetBalance", "placeholder.json");
+        addMockEndpoint("/GetBalance", "getBalanceResponse.json");
         cryptopia.getBalance(CURRENCY_NAME).forEach(System.out::println);
     }
 
     @Test
     public void testGetGetBalanceCurrencyId() {
-        addMockEndpoint("/GetBalance", "placeholder.json");
+        addMockEndpoint("/GetBalance", "getBalanceResponse.json");
         cryptopia.getBalance(CURRENCY_ID).forEach(System.out::println);
     }
 
     @Test
     public void testGetDepositAddressCurrency() {
-        addMockEndpoint("/GetDepositAddress", "placeholder.json");
+        addMockEndpoint("/GetDepositAddress", "getDepositAddressResponse.json");
         cryptopia.getDepositAddress(CURRENCY_NAME).ifPresent(System.out::println);
     }
 
     @Test
     public void testGetDepositAddressCurrencyId() {
-        addMockEndpoint("/GetDepositAddress", "placeholder.json");
+        addMockEndpoint("/GetDepositAddress", "getDepositAddressResponse.json");
         cryptopia.getDepositAddress(CURRENCY_ID).ifPresent(System.out::println);
     }
 
     @Test
     public void testGetOpenOrders() {
-        addMockEndpoint("/GetOpenOrders", "placeholder.json");
+        addMockEndpoint("/GetOpenOrders", "getOpenOrdersResponse.json");
         cryptopia.getOpenOrders().forEach(System.out::println);
     }
 
     @Test
     public void testGetOpenOrdersMarket() {
-        addMockEndpoint("/GetOpenOrders", "placeholder.json");
+        addMockEndpoint("/GetOpenOrders", "getOpenOrdersResponse.json");
         cryptopia.getOpenOrders(MARKET).forEach(System.out::println);
     }
 
     @Test
     public void testGetOpenOrdersMarketCount() {
-        addMockEndpoint("/GetOpenOrders", "placeholder.json");
+        addMockEndpoint("/GetOpenOrders", "getOpenOrdersResponse.json");
         cryptopia.getOpenOrders(MARKET, COUNT).forEach(System.out::println);
     }
 
     @Test
     public void testGetOpenOrdersTradePairIdCount() {
-        addMockEndpoint("/GetOpenOrders", "placeholder.json");
+        addMockEndpoint("/GetOpenOrders", "getOpenOrdersResponse.json");
         cryptopia.getOpenOrders(TRADEPAIR_ID, COUNT).forEach(System.out::println);
     }
 
     @Test
     public void testGetOpenOrdersTradePairId() {
-        addMockEndpoint("/GetOpenOrders", "placeholder.json");
+        addMockEndpoint("/GetOpenOrders", "getOpenOrdersResponse.json");
         cryptopia.getOpenOrders(TRADEPAIR_ID).forEach(System.out::println);
     }
 
     @Test
     public void testGetTradeHistory() {
-        addMockEndpoint("/GetTradeHistory", "placeholder.json");
+        addMockEndpoint("/GetTradeHistory", "getTradeHistoryResponse.json");
         cryptopia.getTradeHistory().forEach(System.out::println);
     }
 
     @Test
     public void testGetTradeHistoryMarket() {
-        addMockEndpoint("/GetTradeHistory", "placeholder.json");
+        addMockEndpoint("/GetTradeHistory", "getTradeHistoryResponse.json");
         cryptopia.getTradeHistory(MARKET).forEach(System.out::println);
     }
 
     @Test
     public void testGetGetTradeHistoryMarketCount() {
-        addMockEndpoint("/GetTradeHistory", "placeholder.json");
+        addMockEndpoint("/GetTradeHistory", "getTradeHistoryResponse.json");
         cryptopia.getTradeHistory(MARKET, COUNT).forEach(System.out::println);
     }
 
     @Test
     public void testGetTradeHistoryTradePairIdCount() {
-        addMockEndpoint("/GetTradeHistory", "placeholder.json");
+        addMockEndpoint("/GetTradeHistory", "getTradeHistoryResponse.json");
         cryptopia.getTradeHistory(TRADEPAIR_ID, COUNT).forEach(System.out::println);
     }
 
     @Test
     public void testGetTradeHistoryTradePairId() {
-        addMockEndpoint("/GetTradeHistory", "placeholder.json");
+        addMockEndpoint("/GetTradeHistory", "getTradeHistoryResponse.json");
         cryptopia.getTradeHistory(TRADEPAIR_ID).forEach(System.out::println);
     }
 
     @Test
     public void testGetTransactionHistoryMarketCount() {
-        addMockEndpoint("/GetTransactions", "placeholder.json");
+        addMockEndpoint("/GetTransactions", "getTransactionsResponse.json");
         cryptopia.getTransactions("Deposit", COUNT).forEach(System.out::println);
     }
 
     @Test
     public void testGetTransactionHistoryMarket() {
-        addMockEndpoint("/GetTransactions", "placeholder.json");
+        addMockEndpoint("/GetTransactions", "getTransactionsResponse.json");
         cryptopia.getTransactions("Withdraw").forEach(System.out::println);
     }
 
@@ -149,7 +149,7 @@ public class CryptopiaPrivateTest {
      */
     @Test
     public void testSubmitTradeTradePairId() {
-        addMockEndpoint("/SubmitTrade", "placeholder.json");
+        addMockEndpoint("/SubmitTrade", "submitTradeResponse.json");
         BigDecimal rate = BigDecimal.valueOf(1000.0);
         BigDecimal amount = BigDecimal.valueOf(1);
 
@@ -167,7 +167,7 @@ public class CryptopiaPrivateTest {
     //@Test(enabled = false)
     @Test
     public void testSubmitTradeMarket() {
-        addMockEndpoint("/SubmitTrade", "placeholder.json");
+        addMockEndpoint("/SubmitTrade", "submitTradeResponse.json");
         BigDecimal rate = BigDecimal.valueOf(1000.0);
         BigDecimal amount = BigDecimal.valueOf(1);
         cryptopia.submitTrade(TRADEPAIR_ID, "Sell", rate, amount).ifPresent(System.out::println);
@@ -176,14 +176,14 @@ public class CryptopiaPrivateTest {
 
     @Test
     public void testCancelAllTrades() {
-        addMockEndpoint("/CancelTrade", "placeholder.json");
+        addMockEndpoint("/CancelTrade", "cancelTradeResponse.json");
         cryptopia.cancelAllTrades().forEach(System.out::println);
     }
 
 
     @Test
     public void testcancelTradeByOrderId() {
-        addMockEndpoint("/CancelTrade", "placeholder.json");
+        addMockEndpoint("/CancelTrade", "cancelTradeResponse.json");
         /* this value should be changed before the test to a valid tradeOrderId */
         BigInteger orderId = BigInteger.valueOf(285045097);
         cryptopia.cancelTradesByOrderId(orderId).forEach(System.out::println);
@@ -191,7 +191,7 @@ public class CryptopiaPrivateTest {
 
     @Test
     public void testCancelTradeByTradePairId() {
-        addMockEndpoint("/CancelTrade", "placeholder.json");
+        addMockEndpoint("/CancelTrade", "cancelTradeResponse.json");
         cryptopia.cancelTradesByTradePairId(TRADEPAIR_ID).forEach(System.out::println);
     }
 

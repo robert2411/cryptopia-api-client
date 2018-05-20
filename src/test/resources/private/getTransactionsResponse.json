@@ -1,0 +1,30 @@
+{
+  "Success":true,
+  "Error":null,
+  "Data":[
+    {
+      "Id": 23467,
+      "Currency": "DOT",
+      "TxId": "6ddbaca454c97ba4e8a87a1cb49fa5ceace80b89eaced84b46a8f52c2b8c8ca3",
+      "Type": "Deposit",
+      "Amount": 145.98000000,
+      "Fee": "0.00000000",
+      "Status": "Confirmed",
+      "Confirmations": "20",
+      "TimeStamp":"2014-12-07T20:04:05.3947572",
+      "Address": ""
+    },
+    {
+      "Id": 23467,
+      "Currency": "DOT",
+      "TxId": "9281eacaad58335b884adc24be884c00200a4fc17b2e05c72e255976223de187",
+      "Type": "Withdraw",
+      "Amount": 1000.00000000,
+      "Fee": "0.00004000",
+      "Status": "Pending",
+      "Confirmations": "20",
+      "TimeStamp":"2014-12-07T20:04:05.3947572",
+      "Address": "15wPaAegfKai51KK2yemgLP5vEg5UWzSkC"
+    }
+  ]
+}
