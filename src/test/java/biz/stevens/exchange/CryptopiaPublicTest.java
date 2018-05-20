@@ -2,7 +2,6 @@ package biz.stevens.exchange;
 
 import biz.stevens.datatypes.response.*;
 import com.github.tomakehurst.wiremock.WireMockServer;
-import org.apache.commons.configuration.ConfigurationException;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -13,10 +12,8 @@ import java.util.List;
 import java.util.Optional;
 
 import static biz.stevens.exchange.TestHelper.getResourceAsString;
-import static com.github.tomakehurst.wiremock.client.WireMock.aResponse;
-import static com.github.tomakehurst.wiremock.client.WireMock.get;
-import static com.github.tomakehurst.wiremock.client.WireMock.urlEqualTo;
-import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.options;
+import static com.github.tomakehurst.wiremock.client.WireMock.*;
+
 
 /**
  * It seems that the status message is often NULL so that field is not tested!!
@@ -33,7 +30,7 @@ public class CryptopiaPublicTest {
     private CryptopiaPublicImpl cryptopia;
 
     @BeforeClass
-    public void setup() throws ConfigurationException {
+    public void setup() {
         wireMockServer = new WireMockServer(); //No-args constructor will start on port 8080, no HTTPS
         wireMockServer.start();
         int port = wireMockServer.port();

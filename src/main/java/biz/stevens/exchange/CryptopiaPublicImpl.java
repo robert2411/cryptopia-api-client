@@ -192,8 +192,9 @@ public class CryptopiaPublicImpl implements CryptopiaPublic {
     }
 
     private Optional<String> publicCall(final String endpoint) {
+        Response response = null;
         try {
-            Response response = given().
+            response = given().
                     contentType(ContentType.JSON).
                     when().
                     get(this.publicApiBaseUrl + endpoint);
@@ -205,6 +206,11 @@ public class CryptopiaPublicImpl implements CryptopiaPublic {
             return Optional.ofNullable(response.asString());
         } catch (Exception e) {
             log.error("Something went wrong while making publicCall: [{}] Exception [{}]", endpoint, e);
+            return Optional.empty();
+        } catch (AssertionError e) {
+            if (response != null) {
+                log.info("Original response [{}] status code [{}] ", response.asString(), response.statusCode());
+            }
             return Optional.empty();
         }
     }
